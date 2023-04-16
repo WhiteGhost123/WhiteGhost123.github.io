@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Markdown教程 - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">index</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Mkdocs/" class="nav-link">Mkdocs</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Markdown教程</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Mkdocs/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">标题部分</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_2" class="nav-link">一级标题</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_3" class="nav-link">一级标题</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_4" class="nav-link">一级标题</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_5" class="nav-link">二级标题</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_6" class="nav-link">二级标题</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_7" class="nav-link">二级标题</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_12" class="nav-link">段落部分</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_13" class="nav-link">斜体文本部分</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_14" class="nav-link">粗体文本部分</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_15" class="nav-link">粗斜体文本部分</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_16" class="nav-link">分割线部分</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_17" class="nav-link">删除线部分</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_18" class="nav-link">下划线部分</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_19" class="nav-link">脚注部分  ???</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_20" class="nav-link">列表部分</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_21" class="nav-link">列表嵌套</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_22" class="nav-link">区块部分</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_23" class="nav-link">代码部分</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_24" class="nav-link">链接部分</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_25" class="nav-link">图片部分</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_26" class="nav-link">表格部分</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_27" class="nav-link">表格对齐部分</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#html" class="nav-link">支持HTML元素部分</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="_1">标题部分</h2>
+<p>使用=和-标记一级和二级标题(一级标题：1、#+空格+XX；2、XX+回车+=；二级标题：1、##+空格+XX；2、XX+回车+-；三级标题(###+空格+XX)-六级标题(######+空格+XX)(注：最小至六级标题))，效果如下 </p>
+<h1 id="_2">一级标题</h1>
+<h1 id="_3">一级标题</h1>
+<h1 id="_4">一级标题</h1>
+<h2 id="_5">二级标题</h2>
+<h2 id="_6">二级标题</h2>
+<h2 id="_7">二级标题</h2>
+<h3 id="_8">三级标题</h3>
+<h4 id="_9">四级标题</h4>
+<h5 id="_10">五级标题</h5>
+<h6 id="_11">六级标题</h6>
+<h2 id="_12">段落部分</h2>
+<p>使用在句尾双空格和回车的形式，效果如下<br />
+段落换行  </p>
+<h2 id="_13">斜体文本部分</h2>
+<p>使用单星号<em>或者单下横线_加在文本首尾 
+（</em>文本<em> 或者 <em>文本</em> ）的形式，效果如下<br />
+</em>斜体文本*<br />
+<em>斜体文本</em>  </p>
+<h2 id="_14">粗体文本部分</h2>
+<p>使用双星号<strong>或者双下横线_加在文本首尾<br />
+（</strong>文本<strong> 或者 <strong>文本</strong> ）的形式，效果如下<br />
+</strong>粗体文本**<br />
+<strong>粗体文本</strong>  </p>
+<h2 id="_15">粗斜体文本部分</h2>
+<p>使用三星号***或者三下横线_加在文本首尾  </p>
+<p>（<strong><em>文本</em></strong> 或者 <strong><em>文本</em></strong> ）的形式，效果如下<br />
+<strong><em>粗斜体文本</em></strong><br />
+<strong><em>粗斜体文本</em></strong>  </p>
+<h2 id="_16">分割线部分</h2>
+<p>使用三个及以上星号*或减号-或下横线_的形式，效果如下  </p>
+<hr />
+<hr />
+<hr />
+<h2 id="_17">删除线部分</h2>
+<p>使用双波浪线即~~放置在文字首尾，效果如下<br />
+~~北京工业大学~~  </p>
+<h2 id="_18">下划线部分</h2>
+<p>使用单书名号的u来表现，带下划线/u来结束，效果如下<br />
+<u>BJUT</u>  </p>
+<h2 id="_19">脚注部分  ???</h2>
+<p>使用[^BJUT]的格式进行标注，效果如下<br />
+脚注 [^BJUT] 进行表达  </p>
+<p>[^BJUT]:Beijing University of Technology</p>
+<h2 id="_20">列表部分</h2>
+<p>使用星号<em>、加号+或减号-作为列表标记，并在后面添加一个空格，以表示无序列表，使用数字并加上点.，同样在后面添加一个表格，来表示有序列表，效果如下<br />
+</em> 无序列表<br />
++ 无序列表<br />
+- 无序列表<br />
+1. 有序列表<br />
+2. 有序列表<br />
+3. 有序列表  </p>
+<h2 id="_21">列表嵌套</h2>
+<p>在子列表中的选项签名添加两个或四个空格，效果如下<br />
+1. 列表<br />
+  * 1子列表嵌套<br />
+    * 2子列表嵌套  </p>
+<h2 id="_22">区块部分</h2>
+<p>使用单书名号&gt;并在后面加一个空格的形式来表达，效果如下  </p>
+<blockquote>
+<p>BJUT  </p>
+<blockquote>
+<p>材料与制造学部  </p>
+<blockquote>
+<p>材料科学与工程<br />
+区块中使用列表<br />
+BJUT<br />
+1.ONE<br />
+2.TWO<br />
++ JUST<br />
++ DO<br />
++ IT<br />
+列表中使用区块<br />
+<em> list one<br />
+    &gt; one<br />
+    &gt; two<br />
+</em> list two  </p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2 id="_23">代码部分</h2>
+<p>使用反引号<code>将段落上的函数或片段包起来，效果如下</code>printf()`  </p>
+<h2 id="_24">链接部分</h2>
+<p>使用<a href="链接地址">链接名称</a>或者&lt;链接地址&gt;的方式形成链接，效果如下<br />
+<a href="https://www.bjut.edu.cn/">北京工业大学</a><br />
+<a href="https://www.bjut.edu.cn/">https://www.bjut.edu.cn/</a>  </p>
+<h2 id="_25">图片部分</h2>
+<p>使用感叹号！+单括号[]+小括号()的格式，括号内容分别为文本(图片名称)和图片地址，效果如下<br />
+！<a href="https://inews.gtimg.com/newsapp_bt/0/14106882997/1000">BJUT</a>  </p>
+<h2 id="_26">表格部分</h2>
+<p>使用|来分隔单元格，使用-分隔表头和其他行，效果如下<br />
+|表头|表头|
+|----|----|
+|单元格|单元格|
+|单元格|单元格|  </p>
+<h2 id="_27">表格对齐部分</h2>
+<p>使用-:设置内容和标题栏居右对齐，使用:-设置内容和标题栏左对齐，使用:-:设置内容和标题栏居中对齐，效果如下<br />
+|左对齐|居中对齐|右对齐|
+|:-----|:-----:|-----:|
+|BJUT|BJUT|BJUT|  </p>
+<h2 id="html">支持HTML元素部分</h2>
+<p>支持的 HTML 元素有(加&lt;&gt;)：kbd、b、i、em、sup、sub、br等，效果如下  </p>
+<p>使用 <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd> 重启电脑<br />
+使用 <kbd>Ctrl</kbd>+<kbd>A</kbd> 全选<br />
+使用 <kbd>Ctrl</kbd>+<kbd>C</kbd> 复制<br />
+使用 <kbd>Ctrl</kbd>+<kbd>V</kbd> 粘贴<br />
+<b>加粗</b><br />
+<i>斜体</i><br />
+AAA<emp>强调</emp>BBB<br />
+X<sup>2</sup><br />
+X<sub>2</sub></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
