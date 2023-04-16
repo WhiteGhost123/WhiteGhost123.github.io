@@ -1,7 +1,359 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>My Docs</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="js/jquery-1.10.2.min.js" defer></script>
+        <script src="js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body class="homepage">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href=".">My Docs</a>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#mkdocs" class="nav-link">安装mkdocs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">创建项目</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">文档预览</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#_3" class="nav-link">更换主题</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_4" class="nav-link">下载主题部分</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#mkdocsyml" class="nav-link">mkdocs.yml内添加</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#mkdocsyml_1" class="nav-link">进行mkdocs.yml配置</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_5" class="nav-link">主题配置</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_6" class="nav-link">图标</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_7" class="nav-link">扩展</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#css" class="nav-link">自定义css</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#js" class="nav-link">自定义js</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_8" class="nav-link">设置</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_9" class="nav-link">文档区</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_10" class="nav-link">部署站点</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="mkdocs">安装mkdocs</h2>
+<p>pip install mkdocs  </p>
+<h2 id="_1">创建项目</h2>
+<p>mkdocs new testdocs  </p>
+<h2 id="_2">文档预览</h2>
+<p>mkdocs serve  </p>
+<h2 id="_3">更换主题</h2>
+<h1 id="_4">下载主题部分</h1>
+<p>pip install mkdocs-material mkdoc-windmill  </p>
+<h1 id="mkdocsyml">mkdocs.yml内添加</h1>
+<p>theme<br />
+  name：'material'  </p>
+<h2 id="mkdocsyml_1">进行mkdocs.yml配置</h2>
+<p>site_name: My Docs<br />
+site_decrription: 在线云文档<br />
+site_author: 小康<br />
+copyright: Copyright &copy; 2022 - 2099 小康
+site_url: https://mkdocs.codeslive.top/
+repo_url: https://github.com/codeslive/mkdocs
+repo_name: mkdocs
+edit_uri: ""  </p>
+<h1 id="_5">主题配置</h1>
+<p>theme: 
+    name: material
+    language: en
+    search_index_only: true
+    palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material//weather-sunny
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      primary: teal
+      scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+    features:
+    #- navigation.instant # 点击内部链接时，不用全部刷新页面
+    - navigation.tracking # 在url中使用标题定位锚点
+    - navigation.tabs # 顶部显示导航顶层nav（也就是第一个节点）
+    - navigation.tabs.sticky # 滚动是隐藏顶部nav，需要配合navigation.tabs使用
+    - navigation.sections # nav节点缩进
+    - navigation.expand # 不折叠左侧nav节点
+    - navigation.indexes # 指定节点index pages ，跟instant不兼容
+    - toc.integrate # 右侧生产目录
+    - toc.integrate #导航集成
+    - navigation.top # 一键回顶部
+    - header.autohide
+    - search.share # 搜索分享
+    - search.suggest # 搜索建议
+    - search.highlight #搜索高亮</p>
+<p>plugins:
+  - search:
+      jieba_dict: user_dict.txt</p>
+<h1 id="_6">图标</h1>
+<p>icon:
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/squirrel-16
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16</p>
+<h1 id="_7">扩展</h1>
+<p>markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - abbr
+  - pymdownx.snippets
+  - def_list
+  - tables
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - attr_list
+  - md_in_html
+  - meta
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.caret #下划线
+  - pymdownx.mark #文本高亮
+  - pymdownx.tilde #删除线</p>
+<h1 id="css">自定义css</h1>
+<p>extra_css: 
+   - '//cdn.staticaly.com/gh/codeslive/cdn@main/css/imageszoom.css' #图片放大css
+  #- '//cdn.staticaly.com/gh/codeslive/images-pages@main/cdn/css/custom.css'
+  #- '//cdn.staticaly.com/gh/codeslive/images-pages@main/cdn/css/simplelightbox.min.css' #图片放大css</p>
+<h1 id="js">自定义js</h1>
+<p>extra_javascript: 
+  - '//cdn.staticaly.com/gh/codeslive/cdn@main/js/busuanzi.pure.mini.js' # 网站访问统计
+  - '//cdn.staticaly.com/gh/codeslive/cdn@main/js/imageszoom.js' # 图片放大js
+  #- '//cdn.staticaly.com/gh/codeslive/cdn@main/js/jquery-3.2.1.min.js' 
+  #- '//cdn.staticaly.com/gh/codeslive/cdn@main/js/simplelightbox.min.js'  #图片放大js
+  #- '//cdn.staticaly.com/gh/codeslive/cdn@main/js/custom.js'</p>
+<h1 id="_8">设置</h1>
+<p>extra:
+    social:
+        -   icon: fontawesome/brands/github
+            link: https://github.com/codeslive
+            name: github
+        -   icon: fontawesome/brands/slack
+            link: https://codeslive.github.io
+            name: myblog
+        -   icon: fontawesome/solid/paper-plane
+            link: 2783779285@qq.com
+            name: 邮箱地址</p>
+<h1 id="_9">文档区</h1>
+<p>nav:
+    - 文档介绍: 'index.md'
+    - '在线云文档':
+        - '静态云文档':
+            - mkdoc : 'mkdocs.md'
+            - docsify : 'docsify.md'
+        - '动态云文档':
+            - leanote : 'leanote.md'
+            - mrdoc : 'mrdoc.md'
+            - showdoc: 'showdoc.md'
+    - 个人博客搭建:
+        - '静态博客':
+            - hexo : 'hexo.md'
+            - vuepress : 'vuepress.md'
+        - '动态博客':
+            - halo : 'halo.md'
+            - worldpress : 'worldpress.md'
+    - 开发记录: 'record.md'</p>
+<h2 id="_10">部署站点</h2>
+<ol>
+<li>打包命令<br />
+mkdocs build  </li>
+<li>添加仓库
+ git init
+ git remote add origin gh repo clone codeslive/mkdocs</li>
+<li>上传
+ mkdocs gh-deploy
+ or
+ mkdocs build --clean &amp;&amp; mkdocs gh-deploy</li>
+</ol></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js" defer></script>
+        <script src="search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
 </html>
+
+<!--
+MkDocs version : 1.4.2
+Build Date UTC : 2023-04-16 11:02:09.660748+00:00
+-->
