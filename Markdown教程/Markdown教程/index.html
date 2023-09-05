@@ -123,47 +123,39 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#_17" class="nav-link">删除线部分</a>
+            <li class="nav-item" data-level="2"><a href="#_17" class="nav-link">删除线</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#_18" class="nav-link">下划线部分</a>
+            <li class="nav-item" data-level="2"><a href="#_20" class="nav-link">下划线部分</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#_19" class="nav-link">脚注部分  ???</a>
+            <li class="nav-item" data-level="2"><a href="#_23" class="nav-link">脚注</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#_20" class="nav-link">列表部分</a>
+            <li class="nav-item" data-level="2"><a href="#_26" class="nav-link">列表（编号）</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#_21" class="nav-link">列表嵌套</a>
+            <li class="nav-item" data-level="2"><a href="#_29" class="nav-link">区块</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#_22" class="nav-link">区块部分</a>
+            <li class="nav-item" data-level="2"><a href="#_32" class="nav-link">代码区块</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#_23" class="nav-link">代码部分</a>
+            <li class="nav-item" data-level="2"><a href="#_35" class="nav-link">链接</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#_24" class="nav-link">链接部分</a>
+            <li class="nav-item" data-level="2"><a href="#_38" class="nav-link">图片</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#_25" class="nav-link">图片部分</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#_26" class="nav-link">表格部分</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#_27" class="nav-link">表格对齐部分</a>
+            <li class="nav-item" data-level="2"><a href="#_41" class="nav-link">表格</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -196,7 +188,8 @@
 * 目前相关的插件多</p>
 <p>缺点：
 * 不同平台的兼容性可能不一样。有些平台可以接受某些标记，而某些就不行。
-* 它不会做任何花哨的事情，比如改变字体大小、颜色或类型（不过这个好想可以通过添加html语言来帮忙解决）</p>
+* 它不会做任何花哨的事情，比如改变字体大小、颜色或类型（不过这个好想可以通过添加html语言来帮忙解决）
+* 在很多时候空格会引发错误，与普通的书写习惯相悖。（这点很重要，不要轻易的输入空格）</p>
 <p>（关于优缺点这块我觉得在我以后实际使用的时候可以补充不少）</p>
 <hr />
 <h1 id="_1">开始学习</h1>
@@ -250,8 +243,8 @@ XXX
 <h3 id="_6">代码及效果</h3>
 <pre><code>'''缩进'''
 
-'''&amp;nbsp; 与 &amp;#160; 为缩进四分之一汉字大小'''
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;文字内容
+'''  与 &amp;#160; 为缩进四分之一汉字大小'''
+        文字内容
 &amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;文字内容
 
 '''&amp;ensp; 与 &amp;#8194; 为缩进二分之一汉字大小'''
@@ -265,7 +258,7 @@ XXX
 <p>以上代码效果相同，均如下所示，具体缩进时可以根据不同情况使用。</p>
 <p>&#8195;&#8195;文字内容</p>
 <h3 id="_7">详细介绍</h3>
-<p>按照中文的书写习惯，缩进肯定是必不可少的，不过在Markdown的语言中没有明确的用来段首缩进的符号，不过如果为了书写好看，可以使用html中的&nbsp;、&#160;、&ensp;、&#8194;、&emsp;、&#8195;等空格标记实现缩进。在使用的时候，要特别注意两点。第一点是要记得打 <strong><em>分号</em></strong> ！！！第二点是这几个空格标记所标记的空格大小是不同的，分别是四分之一汉字、二分之一汉字和一个汉字，也就是如果实现一般中文写作习惯中的空两个字符位置，就分别要输入8个、4个、2个。</p>
+<p>按照中文的书写习惯，缩进肯定是必不可少的，不过在Markdown的语言中没有明确的用来段首缩进的符号，不过如果为了书写好看，可以使用html中的 、&#160;、&ensp;、&#8194;、&emsp;、&#8195;等空格标记实现缩进。在使用的时候，要特别注意两点。第一点是要记得打 <strong><em>分号</em></strong> ！！！第二点是这几个空格标记所标记的空格大小是不同的，分别是四分之一汉字、二分之一汉字和一个汉字，也就是如果实现一般中文写作习惯中的空两个字符位置，就分别要输入8个、4个、2个。</p>
 <h2 id="_8">换行</h2>
 <h3 id="_9">代码及效果</h3>
 <pre><code>'''换行'''
@@ -317,83 +310,275 @@ ___
 <center>分割线示意图</center></p>
 <h3 id="_16">详细介绍</h3>
 <p>分割线可能是我们平常写作中用到不多的一种修饰符，不过在网页上它还挺重要的，它可以快速的对于区域进行分块。其输入方法也很简单，只需要在本行内单独输入“*”、“-”或“_”连续3个及以上就行，是的，输入三个就能达到分割线的效果，不过为了使文档编译前可读性高一点或者单纯发泄一下，可以输入满满一行的“-”（如果不输入换行符的话一直都是一行哦~）。</p>
-<h2 id="_17">删除线部分</h2>
-<p>使用双波浪线即~~放置在文字首尾，效果如下<br />
-~~北京工业大学~~  </p>
-<h2 id="_18">下划线部分</h2>
-<p>使用单书名号的u来表现，带下划线/u来结束，效果如下<br />
-<u>BJUT</u>  </p>
-<h2 id="_19">脚注部分  ???</h2>
-<p>使用[^BJUT]的格式进行标注，效果如下<br />
-脚注 [^BJUT] 进行表达  </p>
-<p>[^BJUT]:Beijing University of Technology</p>
-<h2 id="_20">列表部分</h2>
-<p>使用星号<em>、加号+或减号-作为列表标记，并在后面添加一个空格，以表示无序列表，使用数字并加上点.，同样在后面添加一个表格，来表示有序列表，效果如下<br />
-</em> 无序列表<br />
-+ 无序列表<br />
-- 无序列表<br />
-1. 有序列表<br />
-2. 有序列表<br />
-3. 有序列表  </p>
-<h2 id="_21">列表嵌套</h2>
-<p>在子列表中的选项签名添加两个或四个空格，效果如下<br />
-1. 列表<br />
-  * 1子列表嵌套<br />
-    * 2子列表嵌套  </p>
-<h2 id="_22">区块部分</h2>
-<p>使用单书名号&gt;并在后面加一个空格的形式来表达，效果如下  </p>
+<h2 id="_17">删除线</h2>
+<h3 id="_18">代码及效果</h3>
+<pre><code>'''删除线'''
+~~文字内容~~
+</code></pre>
+<p>效果：
+~~文字内容~~</p>
+<h3 id="_19">详细介绍</h3>
+<p>删除线的输入方式很简单，仅需先输入两个波浪符“~”，在输入需要的文字内容，之后再次输入两个波浪符将需要画删除线的内容包含住就好。</p>
+<p>说实话我很好奇这个删除线有什么实际的应用场景，~~感觉它屁用没有~~不过既然Markdown提供了这种标记方式，那么应该是有它的道理，可能可以更好的标注一篇文章的改动（表示怀疑）</p>
+<h2 id="_20">下划线部分</h2>
+<h3 id="_21">代码及效果</h3>
+<pre><code>'''下划线'''
+&lt;u&gt;文字内容&lt;/u&gt;
+</code></pre>
+<p>效果：
+<u>文字内容</u></p>
+<h3 id="_22">详细介绍</h3>
+<p>没啥可介绍的这个，用了HTML里面的“\&lt;u>”标签，使用“\&lt;u>”和\&lt;\/u>”把需要加下划线的部分包含起来就好。</p>
+<h2 id="_23">脚注</h2>
+<h3 id="_24">代码及效果</h3>
+<pre><code>'''脚注'''
+文字内容 [^脚注符号]
+（空行）
+[^脚注符号]: 脚注内容
+</code></pre>
+<p>效果：</p>
+<p>文字内容 <a href="脚注内容">^脚注符号</a></p>
+<h3 id="_25">详细介绍</h3>
+<p>脚注是在论文、科普性文章中很重要的一个功能，来源的引用都需要用到脚注功能。同时它也是折磨了我和我的学习团队很久的一个功能，我们在学习它的时候出现了很多的意外情况，接下来我将详细介绍。</p>
+<p>首先，如果想添加一个脚注，只需要在文章需要添加脚注的地方输入“ [\^] ”，并在“^”后面输入上脚注的名称或者符号即可，然后在文章之后，换行，输入同样的“ [\^脚注名称] ”，并输入一个英文的冒号（“:”）之后输入脚注的内容即可。</p>
+<p><img alt="脚注示例" src="../image/%E8%84%9A%E6%B3%A8_%E8%84%9A%E6%B3%A8%E7%A4%BA%E4%BE%8B.png" title="脚注示例" />
+<center>脚注示例</center></p>
+<p>但是！切记，首先，在正常文本与脚注内容中一定要有空行。其次，在脚注内容中，一定不要有空格！如果需要键入空格，请用\&amp;nbsp\;或者其他空格符号（参见缩进），否则将造成错误，不能正确识别为脚注。</p>
+<p>正确示范</p>
+<p><img alt="正确示范" src="../image/%E8%84%9A%E6%B3%A8_%E6%AD%A3%E7%A1%AE%E7%A4%BA%E8%8C%83.png" title="正确示范" />
+<center>正确示范</center></p>
+<p>错误示范</p>
+<p><img alt="错误示范" src="../image/%E8%84%9A%E6%B3%A8_%E9%94%99%E8%AF%AF%E7%A4%BA%E8%8C%83.png" title="错误示范" />
+<center>错误示范</center></p>
+<h2 id="_26">列表（编号）</h2>
+<h3 id="_27">代码及效果</h3>
+<pre><code>'''无序列表'''
+* 无序列表
++ 无序列表
+- 无序列表
+
+'''有序列表'''
+1. 有序列表
+2. 有序列表
+3. 有序列表
+
+1. 多级列表嵌套
+  * 1级子列表嵌套
+    * 2极子列表嵌套
+</code></pre>
+<p>效果：</p>
+<ul>
+<li>
+<p>无序列表</p>
+</li>
+<li>
+<p>有序列表</p>
+</li>
+<li>有序列表</li>
+<li>有序列表</li>
+</ul>
+<hr />
+<ol>
+<li>多级列表<ul>
+<li>1子列表嵌套<ul>
+<li>2子列表嵌套</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="_28">详细介绍</h3>
+<p>在word中，编号和项目符号功能是一个很常用的功能。当然，编号功能在word里也是一个很让人头疼的功能，它常常不受作者的控制随机产生各种顺序的编号，好在在Markdown中作者对于文档的控制能力强多了。在Markdown中，这两个个功能被称为列表。</p>
+<p>列表分为有需列表和无序列表，其中无序列表的实现仅需要在行首输入星字符（“<em>”）十字符（“+”）或短横线（“-”）其中1个1次，然后输入1个 </em><strong>空格</strong>* ，之后输入本列内的文本内容即可。</p>
+<p>而有序列表需要输入一个数字，一个英文句号后输入1个 <strong><em>空格</em></strong> ，之后输入本列内的文本内容即可。有趣的是，即使你输入的数字并不是按序的，在编译的时候可能会帮你自动按出现顺序拍好序，不过建议为了文档的可读性，还是按序输入数字。一件有趣的事，我并不知道如何重新开启一个新的列表，换句话说我并不知道如何重新编号，在上面所展示的效果中，我是在“多级列表”前加了一个分割线实现的重新编号，刚刚查了百度也没有给我明确的答案。</p>
+<p>多级列表嵌套的实现主要通过缩进实现，在列表前输入4个空格或者一个"tab"即可将该列表降级成为次一级的列表，在不同的平台上，不同的次级列表有不同的标志。</p>
+<h2 id="_29">区块</h2>
+<h3 id="_30">代码及效果</h3>
+<pre><code>'''区块'''
+&gt; 一级区块
+&gt;&gt; 二级区块
+&gt;&gt;&gt; 三级区块
+</code></pre>
+<p>效果</p>
 <blockquote>
-<p>BJUT  </p>
+<p>一级区块  </p>
 <blockquote>
-<p>材料与制造学部  </p>
+<p>二级区块  </p>
 <blockquote>
-<p>材料科学与工程<br />
-区块中使用列表<br />
-BJUT<br />
+<p>三级区块  </p>
+</blockquote>
+</blockquote>
+</blockquote>
+<pre><code>'''区块与列表套用'''
+'''区块中使用列表'''
+&gt; BJUT
+&gt; 1.ONE
+&gt; 2.TWO
+&gt; + JUST
+&gt; + DO
+&gt; + IT
+'''列表中使用区块'''  
+* list one
+    &gt; one
+    &gt; two
+* list two
+</code></pre>
+<p>效果：
+区块中使用列表  </p>
+<blockquote>
+<p>BJUT<br />
 1.ONE<br />
 2.TWO<br />
 + JUST<br />
 + DO<br />
-+ IT<br />
-列表中使用区块<br />
++ IT  </p>
+</blockquote>
+<p>列表中使用区块<br />
 <em> list one<br />
     &gt; one<br />
-    &gt; two<br />
+    &gt;&gt; two<br />
 </em> list two  </p>
-</blockquote>
-</blockquote>
-</blockquote>
-<h2 id="_23">代码部分</h2>
-<p>使用反引号<code>将段落上的函数或片段包起来，效果如下</code>printf()`  </p>
-<h2 id="_24">链接部分</h2>
-<p>使用<a href="链接地址">链接名称</a>或者&lt;链接地址&gt;的方式形成链接，效果如下<br />
-<a href="https://www.bjut.edu.cn/">北京工业大学</a><br />
-<a href="https://www.bjut.edu.cn/">https://www.bjut.edu.cn/</a>  </p>
-<h2 id="_25">图片部分</h2>
-<p>使用感叹号！+单括号[]+小括号()的格式，括号内容分别为文本(图片名称)和图片地址，效果如下<br />
-！<a href="https://inews.gtimg.com/newsapp_bt/0/14106882997/1000">BJUT</a>  </p>
-<h2 id="_26">表格部分</h2>
-<p>使用|来分隔单元格，使用-分隔表头和其他行，效果如下<br />
+<h3 id="_31">详细介绍</h3>
+<p>区块是写文章中非常常用的一种排版功能，它可以便捷的显示出文章的层级关系。区块的实现仅需在行开头输入一个单书名号“&gt;”即可标记为区块，在“&gt;"前输入4个空格或者一个"tab"即可将该区块降级成为次一级的区块。区块与列表可以相互嵌套使用。</p>
+<h2 id="_32">代码区块</h2>
+<h3 id="_33">代码及效果</h3>
+<pre><code>'''代码区块'''
+(一个“tab”或者4个空格)代码
+
+'''代码'''
+
+```代码语言
+代码段
+```
+
+`代码`
+</code></pre>
+<p>效果</p>
+<pre><code>this is a code
+print()
+</code></pre>
+<pre><code class="language-python">    this is a python code
+    print()
+</code></pre>
+<p><code>this is a code print()</code></p>
+<h3 id="_34">详细介绍</h3>
+<p>在写科技类博客的时候，代码区块是一个很重要的部分，之前我也没有很好的研究过这一部分，只使用过制表符（“tab”）来写代码，这次也借这个机会好好的了解了一下再Markdown中不懂代码区块之间的区别。</p>
+<p>代码区块有三种实现方法，分别是使用制表符（“tab”），1个反引号（“`”，键盘数字键“1”左边那个键）和3个反引号。这三种符号都比较好理解，观察一下上面代码的举例基本就可以知道怎么使用，所以我就不在这赘述它们的使用方法了，主要介绍一下它们之间的区别。</p>
+<p>首先是1个反引号所形成的代码区块，这种方式的代码区块仅仅能生成一行代码，即使在文档中给它换行了在最后显示的时候它还是一行代码，所以这种方式我觉得更适合用在于说明单独一个命令的时候，比如<code>hello world</code>，不过它也有自己的优点，如你所见，它可以直接嵌套在文档的文字说明之中，而不用单独产生一个区块，这是3个反引号与制表符所办不到的。</p>
+<p>而3个反引号与制表符最大的优势是可以生成一个区块，在这个区块里可以比较自由的实现换行，这样可以更好的写作一段代码。它们之间的不同是3个反引号可以选择输入的代码是某种语言的，从而根据该种语言实现关键词的高亮，这提升一个项目的可读性来说我觉得非常重要。不过作为中文作者，输入3个反引号就意味着势必要切换一次输入法，所以制表符是在写作时成本最低的一种输入方式。</p>
+<h2 id="_35">链接</h2>
+<h3 id="_36">代码及效果</h3>
+<pre><code>'''链接'''
+[链接名称](链接地址)
+
+&lt;链接地址&gt;
+
+[链接名称][链接变量]
+
+[链接变量]:链接地址
+</code></pre>
+<p>效果：
+<a href="www.baidu.com">百度</a></p>
+<p><a href="https://www.baidu.com">https://www.baidu.com</a></p>
+<p><a href="https://www.baidu.com">百度</a></p>
+<h3 id="_37">详细介绍</h3>
+<p>Markdown的常见链接有两种插入方式，分别是使用“[链接名称](链接地址)”和“\&lt;链接地址>”。前者会在显示的时候保留“链接名称”并进行高亮处理，然后隐藏“链接地址”，后者则是直接显示“链接地址”并进行高亮。需要注意的是，在使用后一种方式的时候，链接地址需要写上协议名比如百度需要写“http://www.baidu.com”而不能仅仅写www.baidu.com。</p>
+<p>然后还有一种高级的链接方式，它可以在“链接名称”后面设定一个“链接变量”，形如“[链接名称][链接变量]”，然后在文章的末尾通过“[链接变量]:链接地址”的形式填充变量，这种方式比较方便在文章中多处设定相同的链接跳转后统一维护。</p>
+<h2 id="_38">图片</h2>
+<h3 id="_39">代码及效果</h3>
+<pre><code>'''图片'''
+![alt 属性文本](图片地址 'title 属性')
+
+
+'''alt属性是一个用于网页语言HTML和XHTML、为输出纯文字的参数属性，作用是当HTML元素本身的物件无法被渲染时，就显示alt（替换）文字作为一种补救措施。'''
+'''title 属性规定关于元素的额外信息。这些信息通常会在鼠标移到元素上时显示一段工具提示文本（tooltip text）。'''
+</code></pre>
+<p>效果：</p>
+<p><img alt="图片示例" src="../image/%E5%9B%BE%E7%89%87%E7%A4%BA%E4%BE%8B.jpg" title="title示例" />
+<center>图片示例与title示例</center></p>
+<p><img alt="alt示例" src="image\alt示例.jpg" title="alt示例" />
+<center>alt示例</center></p>
+<h3 id="_40">详细介绍</h3>
+<p>在文档中插入一个图片，仅需要使用感叹号!+单括号[]+小括号()的格式，其中[]内写的是图片的“alt属性”，这个属性可以在图片无法被html渲染的时候以alt中的文字替代无法显示的图片，就像很多时候我们在网站上看到的“图片已损坏”的提示一样。()内写的是图片的地址，这个地址可以是本地图片的路径，也可以是互联网图床上面的图片。在输入完地址后可以输入空格+一对双引号""，在""内写的就是图片的“title属性”，该属性的作用就是当鼠标悬停在图片上时所显示的文字内容。其中“title属性”可以忽略，但是“alt属性”必须输入。</p>
+<p><img alt="title示例" src="../image/title%E7%A4%BA%E4%BE%8B.png" title="title示例" />
+<center>title示例</center></p>
+<h2 id="_41">表格</h2>
+<h3 id="_42">代码及效果</h3>
+<pre><code>'''这是一个表格’‘’
 |表头|表头|
 |----|----|
 |单元格|单元格|
-|单元格|单元格|  </p>
-<h2 id="_27">表格对齐部分</h2>
-<p>使用-:设置内容和标题栏居右对齐，使用:-设置内容和标题栏左对齐，使用:-:设置内容和标题栏居中对齐，效果如下<br />
+|单元格|单元格|
+
 |左对齐|居中对齐|右对齐|
 |:-----|:-----:|-----:|
-|BJUT|BJUT|BJUT|  </p>
+</code></pre>
+<p>效果：</p>
+<p><center></p>
+<table>
+<thead>
+<tr>
+<th>表头</th>
+<th>表头</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+<tr>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+</tbody>
+</table>
+<p></center>
+<center></p>
+<table>
+<thead>
+<tr>
+<th align="left">左对齐</th>
+<th align="center">居中对齐</th>
+<th align="right">右对齐</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">000</td>
+<td align="center">001</td>
+<td align="right">010</td>
+</tr>
+<tr>
+<td align="left">0100</td>
+<td align="center">0101</td>
+<td align="right">0110</td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<h3 id="_43">详细介绍</h3>
+<p>在Markdown表格中，使用竖线“|”来分隔单元格，使用短横线“-”分隔表头和其他行。如果希望该列表格左对齐就在短横线的左侧添加一个冒号“:”，形成一个形如“:-”的标记，该列表格将会全部左对齐，右对齐同理，在短横线右侧添加冒号，形如“-:”，即可使该列表格全部右对齐。如果想要居中，则需要再短横线两侧分别添加冒号，形如“:-:”即可使该列表格全部居中显示。其中短横先可以输入1个及以上，显示效果相同，不过可以增加文档的可读性。（“:-:”与“:---------:”效果相同）</p>
 <h2 id="html">支持HTML元素部分</h2>
-<p>支持的 HTML 元素有(加&lt;&gt;)：kbd、b、i、em、sup、sub、br等，效果如下  </p>
-<p>使用 <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd> 重启电脑<br />
-使用 <kbd>Ctrl</kbd>+<kbd>A</kbd> 全选<br />
-使用 <kbd>Ctrl</kbd>+<kbd>C</kbd> 复制<br />
-使用 <kbd>Ctrl</kbd>+<kbd>V</kbd> 粘贴<br />
-<b>加粗</b><br />
-<i>斜体</i><br />
-AAA<emp>强调</emp>BBB<br />
-X<sup>2</sup><br />
-X<sub>2</sub></p></div>
+<p>在<a href="https://www.runoob.com/markdown/md-tutorial.html">菜鸟教程</a>中，所提出的Markdown支持的html的标签有kbd、b、i、em、sup、sub、br等。</p>
+<p>释义：</p>
+<ul>
+<li>\&lt;kbd>——键盘标签</li>
+<li>\&lt;b>——加粗</li>
+<li>\&lt;i>——斜体</li>
+<li>\&lt;em>——强调（在不同的平台会显示成斜体或者粗体）</li>
+<li>\&lt;sup>——上标</li>
+<li>\&lt;sub>——下标</li>
+<li>\&lt;br>——换行（感觉这个东西在Markdown里换行还挺好使的，我之后试试）</li>
+</ul>
+<p>效果如下：</p>
+<p>使用 <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd> 重启电脑</p>
+<p><b>加粗</b></p>
+<p><i>斜体</i></p>
+<p><em>强调</em></p>
+<p>X<sup>2</sup></p>
+<p>X<sub>2</sub></p>
+<p>这句话后边有一个br标签-&gt;<br>&lt;-这句话前面有一个br标签</p></div>
             </div>
         </div>
 
