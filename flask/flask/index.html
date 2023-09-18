@@ -4,26 +4,26 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="None">
         
         
-        <link rel="shortcut icon" href="img/favicon.ico">
-        <title>Whiteghost Docs</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/base.css" rel="stylesheet">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Mkdocs - Whiteghost Docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
 
-        <script src="js/jquery-1.10.2.min.js" defer></script>
-        <script src="js/bootstrap.min.js" defer></script>
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
-    <body class="homepage">
+    <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href=".">Whiteghost Docs</a>
+                <a class="navbar-brand" href="../..">Whiteghost Docs</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -33,23 +33,23 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">首页</a>
+                            </li>
                             <li class="navitem active">
-                                <a href="." class="nav-link">首页</a>
+                                <a href="./" class="nav-link">Mkdocs</a>
                             </li>
                             <li class="navitem">
-                                <a href="flask/flask/" class="nav-link">Mkdocs</a>
+                                <a href="../../Markdown%E6%95%99%E7%A8%8B/Markdown%E6%95%99%E7%A8%8B/" class="nav-link">Markdown教程</a>
                             </li>
                             <li class="navitem">
-                                <a href="Markdown%E6%95%99%E7%A8%8B/Markdown%E6%95%99%E7%A8%8B/" class="nav-link">Markdown教程</a>
+                                <a href="../../Mkdocs/" class="nav-link">Flask</a>
                             </li>
                             <li class="navitem">
-                                <a href="Mkdocs/" class="nav-link">Flask</a>
+                                <a href="../../%E8%A5%BF%E7%8F%AD%E7%89%99%E5%9B%BD%E9%99%85%E5%BF%97%E6%84%BF%E8%80%85%E5%9B%9E%E5%BF%86%E5%BD%95/%E8%A5%BF%E7%8F%AD%E7%89%99%E5%9B%BD%E9%99%85%E5%BF%97%E6%84%BF%E8%80%85%E5%9B%9E%E5%BF%86%E5%BD%95/" class="nav-link">西班牙国际志愿者回忆录</a>
                             </li>
                             <li class="navitem">
-                                <a href="%E8%A5%BF%E7%8F%AD%E7%89%99%E5%9B%BD%E9%99%85%E5%BF%97%E6%84%BF%E8%80%85%E5%9B%9E%E5%BF%86%E5%BD%95/%E8%A5%BF%E7%8F%AD%E7%89%99%E5%9B%BD%E9%99%85%E5%BF%97%E6%84%BF%E8%80%85%E5%9B%9E%E5%BF%86%E5%BD%95/" class="nav-link">西班牙国际志愿者回忆录</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="%E6%9F%90%E4%BA%BA%E9%A3%9F%E8%B0%B1/" class="nav-link">某人食谱</a>
+                                <a href="../../%E6%9F%90%E4%BA%BA%E9%A3%9F%E8%B0%B1/" class="nav-link">某人食谱</a>
                             </li>
                         </ul>
 
@@ -60,12 +60,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" class="nav-link disabled">
+                                <a rel="prev" href="../.." class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="flask/flask/" class="nav-link">
+                                <a rel="next" href="../../Markdown%E6%95%99%E7%A8%8B/Markdown%E6%95%99%E7%A8%8B/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -87,19 +87,22 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#whiteghost123" class="nav-link">Whiteghost123的小破站</a>
+            <li class="nav-item" data-level="1"><a href="#flask" class="nav-link">Flask</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#flask_1" class="nav-link">什么是Flask</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            
-            <li class="nav-item" data-level="1"><a href="#_1" class="nav-link">历史的回顾~</a>
+            <li class="nav-item" data-level="2"><a href="#flask_2" class="nav-link">为什么学习Flask</a>
               <ul class="nav flex-column">
               </ul>
             </li>
+              </ul>
+            </li>
             
-            <li class="nav-item" data-level="1"><a href="#its-our-first-project-for-learning" class="nav-link">It's our First project for learning</a>
+            <li class="nav-item" data-level="1"><a href="#_1" class="nav-link">开始学习</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#who-are-we" class="nav-link">Who are we</a>
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">安装</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -110,16 +113,40 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="whiteghost123">Whiteghost123的小破站</h1>
-<p>你好，很高兴你来到了我的个人小破站。以前，这里记录了我和我小组一起学习的一些东西，不过不行我们因为各种原因可能走散了（sad），好在我会慢慢完成这些东西的！现在，除了之前打算完成的学习记录，我还会记录我的一些故事，一些旅行的见闻，以及一些奇奇怪怪但是我觉得有有趣的东西，哦对，我可能还会写一下我自己的年鉴。</p>
-<p>首先，个人自我介绍一下吧，来自中国的某人目前硕士在读，主修软件工程，有着金融学的双学士学位，对于各种奇奇怪怪的黑科技和金融充满莫大的兴趣。（很希望和业内或者有这同样兴趣的人一起沟通交流~~~）名字来源于《权力的游戏》里面的白狼“白灵”，所以如果可以，请不要称我为“白鬼”。剩下的想到在写。</p>
+<h1 id="flask">Flask</h1>
+<h2 id="flask_1">什么是Flask</h2>
+<ol>
+<li>什么是Web Framework？</li>
+</ol>
+<p>Web Application Framework（Web应用程序框架）或简单的Web Framework（Web框架）表示一个库和模块的集合，使Web应用程序开发人员能够编写应用程序，而不必担心协议，线程管理等低级细节。</p>
+<ol>
+<li>什么是Flask？</li>
+</ol>
+<p>Flask是一个用Python编写的Web应用程序框架。 它由 Armin Ronacher 开发，他领导一个名为Pocco的国际Python爱好者团队。 Flask基于Werkzeug WSGI工具包和Jinja2模板引擎。两者都是Pocco项目。</p>
+<ol>
+<li>WSGI</li>
+</ol>
+<p>Web Server Gateway Interface（Web服务器网关接口，WSGI）已被用作Python Web应用程序开发的标准。WSGI 是一个 Python Web 应用程序与 Web 服务器之间的接口规范，它定义了应用程序和服务器之间的标准接口，使得应用程序可以在不同的 Web 服务器上运行。WSGI 规范规定了应用程序必须实现的接口方法和服务器需要支持的方法。WSGI 协议使得不同的 Python Web 框架（例如 Flask、Django 等）能够在不同的 Web 服务器上运行，这些服务器可以是 Apache、Nginx 等。</p>
+<p><img alt="WSGI" src="../image/WSGI.webp" title="WSGI" /></p>
+<p>关于WSGI很好的一篇文章：<a href="https://zhuanlan.zhihu.com/p/269456318">《花了两个星期，我终于把 WSGI 给搞明白了》</a></p>
+<ol>
+<li>Werkzeug</li>
+</ol>
+<p>它是一个WSGI工具包，它实现了请求，响应对象和实用函数。 这使得能够在其上构建web框架。 Flask框架使用Werkzeug作为其基础之一。</p>
+<ol>
+<li>jinja2</li>
+</ol>
+<p>jinja2是Python的一个流行的模板引擎。Web模板系统将模板与特定数据源组合以呈现动态网页。</p>
+<p>Flask通常被称为微框架。 它旨在保持应用程序的核心简单且可扩展。Flask没有用于数据库处理的内置抽象层，也没有形成验证支持。相反，Flask支持扩展以向应用程序添加此类功能。</p>
+<h2 id="flask_2">为什么学习Flask</h2>
+<p>我学习Flask的原因很简单，因为用过。在大学本科的毕设中，我用yolo成功的可以识别定位到车辆号牌并用OCR可以提取车牌信息后，尝试为这个系统做一个可以看的客户端，这时，flask映入眼帘，良好的使用体验让我成功把我的毕设代码塞了进去，多少是可以像个web应用一样运行起来了。</p>
+<p>不过说实话我并不了解这个东西，所以，应该是在上次疯狂想做个人网页的时候，我把它想起来了，虽然它没有成为我自己个人网页的选择，不过它的教程还是躺在我的收藏夹里了。现在，我打开了它的教程，打算系统梳理一下这个东西，然后尝试做一个自己的网页应用。本次梳理主要借鉴：<a href="https://www.w3cschool.cn/flask/flask_overview.html">w3cschool——Flask教程</a></p>
 <hr />
-<h1 id="_1">历史的回顾~</h1>
-<h1 id="its-our-first-project-for-learning">It's our First project for learning</h1>
-<h2 id="who-are-we">Who are we</h2>
-<p>We are the students in Bjut who is studing python.Now we are making a wiki to record the proccess and to give pages for someone having same intresting.I will introduce me and my teamates here.~
-* Whiteghost
-I'm the leader and the teacher in this group.Initially, I wanted to make a note to record what I have learned. But it is a huge project for me because how lazy I am! So I planed to teach someone who intersted in coding and let them write the note.  After some time for looking student, I put together the group~~~( hand heart gesture )</p></div>
+<h1 id="_1">开始学习</h1>
+<h2 id="_2">安装</h2>
+<pre><code>pip install Flask
+</code></pre>
+<p>没啥可介绍的，无脑装就行了。</p></div>
             </div>
         </div>
 
@@ -128,11 +155,11 @@ I'm the leader and the teacher in this group.Initially, I wanted to make a note 
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = ".",
+            var base_url = "../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="js/base.js" defer></script>
-        <script src="search/main.js" defer></script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -197,8 +224,3 @@ I'm the leader and the teacher in this group.Initially, I wanted to make a note 
 
     </body>
 </html>
-
-<!--
-MkDocs version : 1.4.2
-Build Date UTC : 2023-09-18 01:20:37.936608+00:00
--->
