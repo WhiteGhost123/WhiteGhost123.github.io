@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Kaggle - Whiteghost Docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Whiteghost Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">首页</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../Mkdocs/" class="nav-link">Mkdocs</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../Markdown%E6%95%99%E7%A8%8B/Markdown%E6%95%99%E7%A8%8B/" class="nav-link">Markdown教程</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../flask/flask/" class="nav-link">Flask</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../%E8%A5%BF%E7%8F%AD%E7%89%99%E5%9B%BD%E9%99%85%E5%BF%97%E6%84%BF%E8%80%85%E5%9B%9E%E5%BF%86%E5%BD%95/%E8%A5%BF%E7%8F%AD%E7%89%99%E5%9B%BD%E9%99%85%E5%BF%97%E6%84%BF%E8%80%85%E5%9B%9E%E5%BF%86%E5%BD%95/" class="nav-link">西班牙国际志愿者回忆录</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Kaggle</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../%E6%9F%90%E4%BA%BA%E9%A3%9F%E8%B0%B1/" class="nav-link">某人食谱</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../%E8%A5%BF%E7%8F%AD%E7%89%99%E5%9B%BD%E9%99%85%E5%BF%97%E6%84%BF%E8%80%85%E5%9B%9E%E5%BF%86%E5%BD%95/%E8%A5%BF%E7%8F%AD%E7%89%99%E5%9B%BD%E9%99%85%E5%BF%97%E6%84%BF%E8%80%85%E5%9B%9E%E5%BF%86%E5%BD%95/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../%E6%9F%90%E4%BA%BA%E9%A3%9F%E8%B0%B1/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#kaggle" class="nav-link">Kaggle</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">缘起</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#kaggle_1" class="nav-link">Kaggle的学习</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#how-models-work" class="nav-link">机器学习模型是怎么工作的（How Models Work）</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">特征工程</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="kaggle">Kaggle</h1>
+<h2 id="_1">缘起</h2>
+<p><a href="https://www.kaggle.com/">Kaggle</a>是一个数据挖掘的学习交流的论坛，从我的“收藏夹”来看，我好像很早就见过它，根据它前后的其他页面来看，大约是2020年左右吧。它再次引起的我的注意的时候，是2023年12月份我在中油绿电新能源有限公司实习的时候，看到的另一位同学投递过来的实习生应聘简历，和我一样没有导师项目的他在简历上写了“具有kaggle、天池相关项目经历”。至此我才仔细开始了解这个有意思的平台。</p>
+<p>Kaggle成立于2010年，是一个进行数据发掘和预测竞赛的在线平台。从公司的角度来讲，可以提供一些数据，进而提出一个实际需要解决的问题；从参赛者的角度来讲，他们将组队参与项目，针对其中一个问题提出解决方案，最终由公司选出的最佳方案可以获得5K-10K美金的奖金。</p>
+<p>除此之外，Kaggle官方每年还会举办一次大规模的竞赛，奖金高达一百万美金，吸引了广大的数据科学爱好者参与其中。从某种角度来讲，大家可以把它理解为一个众包平台，类似国内的猪八戒。但是不同于传统的低层次劳动力需求，Kaggle一直致力于解决业界难题，因此也创造了一种全新的劳动力市场——不再以学历和工作经验作为唯一的人才评判标准，而是着眼于个人技能，为顶尖人才和公司之间搭建了一座桥梁。</p>
+<p>本文我致力于记录一些通过对于kaggle课程的翻译而及描述进行的数据科学相关知识的学习，之后可能会再裂变出另一个页面用来记载我在上面的各个比赛进行的尝试。</p>
+<h1 id="kaggle_1">Kaggle的学习</h1>
+<h2 id="how-models-work">机器学习模型是怎么工作的（How Models Work）</h2>
+<p>我选择这一课作为整篇学习记录起始，因为我坚信只有更直观的知道一个东西能做什么，能有什么用，人才会有学习的动力。</p>
+<p>在<a href="https://www.kaggle.com/code/dansbecker/how-models-work/tutorial"><strong>How Models Work</strong></a>这一章中，kaggle通过一个实例使用决策树模型尝试解释机器学习模型是怎么工作的。解释的场景是这样的：</p>
+<ul>
+<li>
+<p>你的表弟通过投机房地产赚了几百万美元。因为你对数据科学感兴趣，他提出要和你成为生意伙伴。他提供资金，你提供预测各种房屋价值的模型。</p>
+</li>
+<li>
+<p>你问表弟过去是如何预测房地产价值的，他说这只是直觉。但多问几句就会发现，他从过去看过的房子中找出了价格模型，并利用这些模型对他正在考虑的新房子进行预测。</p>
+</li>
+</ul>
+<h3 id="1">1.分析数据</h3>
+<p>任何机器学习项目的第一步都是熟悉数据，课程中，使用pandas读取了原始数据之后使用describe()方法进行了数据的数据的描述，该方法可以以一个表格的方式较为概括性的描述一下数据。</p>
+<p>代码：</p>
+<pre><code class="language-python"># save filepath to variable for easier access
+melbourne_file_path - '../input/melbourne-housing-snapshot/melb_data.csv'
+# read the data and store data in DataFrame titled melbourne_data
+melbourne_data - pd.read_csv(melbourne_file_path) 
+# print a summary of the data in Melbourne data
+melbourne_data.describe()
+</code></pre>
+<p>输出：</p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">Rooms</th>
+<th align="center">Price</th>
+<th align="center">Distance</th>
+<th align="center">Postcode</th>
+<th align="center">Bedroom2</th>
+<th align="center">Bathroom</th>
+<th align="center">Car</th>
+<th align="center">Landsize</th>
+<th align="center">BuildingArea</th>
+<th align="center">YearBuilt</th>
+<th align="center">Lattitude</th>
+<th align="center">Longtitude</th>
+<th align="center">Propertycount</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">count</td>
+<td align="center">13580.000000</td>
+<td align="center">1.358000e+04</td>
+<td align="center">13580.000000</td>
+<td align="center">13580.000000</td>
+<td align="center">13580.000000</td>
+<td align="center">13580.000000</td>
+<td align="center">13518.000000</td>
+<td align="center">13580.000000</td>
+<td align="center">7130.000000</td>
+<td align="center">8205.000000</td>
+<td align="center">13580.000000</td>
+<td align="center">13580.000000</td>
+<td align="center">13580.000000</td>
+</tr>
+<tr>
+<td align="center">mean</td>
+<td align="center">2.937997</td>
+<td align="center">1.075684e+06</td>
+<td align="center">10.137776</td>
+<td align="center">3105.301915</td>
+<td align="center">2.914728</td>
+<td align="center">1.534242</td>
+<td align="center">1.610075</td>
+<td align="center">558.416127</td>
+<td align="center">151.967650</td>
+<td align="center">1964.684217</td>
+<td align="center">-37.809203</td>
+<td align="center">144.995216</td>
+<td align="center">7454.417378</td>
+</tr>
+<tr>
+<td align="center">std</td>
+<td align="center">0.955748</td>
+<td align="center">6.393107e+05</td>
+<td align="center">5.868725</td>
+<td align="center">90.676964</td>
+<td align="center">0.965921</td>
+<td align="center">0.691712</td>
+<td align="center">0.962634</td>
+<td align="center">3990.669241</td>
+<td align="center">541.014538</td>
+<td align="center">37.273762</td>
+<td align="center">0.079260</td>
+<td align="center">0.103916</td>
+<td align="center">4378.581772</td>
+</tr>
+<tr>
+<td align="center">min</td>
+<td align="center">1.000000</td>
+<td align="center">8.500000e+04</td>
+<td align="center">0.000000</td>
+<td align="center">3000.000000</td>
+<td align="center">0.000000</td>
+<td align="center">0.000000</td>
+<td align="center">0.000000</td>
+<td align="center">0.000000</td>
+<td align="center">0.000000</td>
+<td align="center">1196.000000</td>
+<td align="center">-38.182550</td>
+<td align="center">144.431810</td>
+<td align="center">249.000000</td>
+</tr>
+<tr>
+<td align="center">25%</td>
+<td align="center">2.000000</td>
+<td align="center">6.500000e+05</td>
+<td align="center">6.100000</td>
+<td align="center">3044.000000</td>
+<td align="center">2.000000</td>
+<td align="center">1.000000</td>
+<td align="center">1.000000</td>
+<td align="center">177.000000</td>
+<td align="center">93.000000</td>
+<td align="center">1940.000000</td>
+<td align="center">-37.856822</td>
+<td align="center">144.929600</td>
+<td align="center">4380.000000</td>
+</tr>
+<tr>
+<td align="center">50%</td>
+<td align="center">3.000000</td>
+<td align="center">9.030000e+05</td>
+<td align="center">9.200000</td>
+<td align="center">3084.000000</td>
+<td align="center">3.000000</td>
+<td align="center">1.000000</td>
+<td align="center">2.000000</td>
+<td align="center">440.000000</td>
+<td align="center">126.000000</td>
+<td align="center">1970.000000</td>
+<td align="center">-37.802355</td>
+<td align="center">145.000100</td>
+<td align="center">6555.000000</td>
+</tr>
+<tr>
+<td align="center">75%</td>
+<td align="center">3.000000</td>
+<td align="center">1.330000e+06</td>
+<td align="center">13.000000</td>
+<td align="center">3148.000000</td>
+<td align="center">3.000000</td>
+<td align="center">2.000000</td>
+<td align="center">2.000000</td>
+<td align="center">651.000000</td>
+<td align="center">174.000000</td>
+<td align="center">1999.000000</td>
+<td align="center">-37.756400</td>
+<td align="center">145.058305</td>
+<td align="center">10331.000000</td>
+</tr>
+<tr>
+<td align="center">max</td>
+<td align="center">10.000000</td>
+<td align="center">9.000000e+06</td>
+<td align="center">48.100000</td>
+<td align="center">3977.000000</td>
+<td align="center">20.000000</td>
+<td align="center">8.000000</td>
+<td align="center">10.000000</td>
+<td align="center">433014.000000</td>
+<td align="center">44515.000000</td>
+<td align="center">2018.000000</td>
+<td align="center">-37.408530</td>
+<td align="center">145.526350</td>
+<td align="center">21650.000000</td>
+</tr>
+</tbody>
+</table>
+<p>这个方法在初步拿到一组数据集的时候还是非常好用的，可以快速的了解到这组数据的大致情况。当然，如果想进行数据趋势及其他方面的分析，还是需要一些图进行数据可视化的。</p>
+<h3 id="2">2.第一个模型</h3>
+<p>课程尝试引导使用决策树来解决上述问题。首先通过调用columns属性对数据的列进行了观察。</p>
+<pre><code class="language-python">import pandas as pd
+
+melbourne_file_path = '../input/melbourne-housing-snapshot/melb_data.csv'
+melbourne_data = pd.read_csv(melbourne_file_path) 
+melbourne_data.columns
+</code></pre>
+<p>输出：</p>
+<pre><code>Index(['Suburb', 'Address', 'Rooms', 'Type', 'Price', 'Method', 'SellerG',
+*    'Date', 'Distance', 'Postcode', 'Bedroom2', 'Bathroom', 'Car',
+*    'Landsize', 'BuildingArea', 'YearBuilt', 'CouncilArea', 'Lattitude',
+*    'Longtitude', 'Regionname', 'Propertycount'],
+*   dtype='object')
+
+</code></pre>
+<p>同时提到部分数据可能具有缺失值，在处理一些具有缺失值的问题时，可以用最简单的删除法处理缺失值。</p>
+<pre><code class="language-python">melbourne_data = melbourne_data.dropna(axis=0)
+</code></pre>
+<p>在选取用来训练的数据子集的时候，课程介绍了点符号和一个由列的名称组成的list的方法进行选取。课程中，使用了点符号选择了预测目标，使用列的名称的list选取了用于训练的特征。然后用describe()方法和head()方法（输出数据的前5条）对选取出来的X（包含特征的数据子集）进行了检查。</p>
+<pre><code class="language-python">melbourne_features = ['Rooms', 'Bathroom', 'Landsize', 'Lattitude', 'Longtitude']
+y = melbourne_data.Price
+X = melbourne_data[melbourne_features]
+</code></pre>
+<p>在准备好所有所需数据之后，可成就开始调用sklearn.tree中的DecisionTreeRegressor开始的拟合构建第一个模型。</p>
+<pre><code class="language-python">from sklearn.tree import DecisionTreeRegressor
+
+# Define model. Specify a number for random_state to ensure same results each run
+melbourne_model = DecisionTreeRegressor(random_state=1)
+
+# Fit model
+melbourne_model.fit(X, y)
+</code></pre>
+<h3 id="3">3.模型的验证</h3>
+<p>模型的验证是很重要的一部分，毕竟只有有了足够良好的评判标准，才能知道如何让自己设计的模型变得越来越好。</p>
+<p>在验证模型的时候，训练集和测试集的区分是很重要的一个事情，因为机器学习存在过拟合这个问题，如果使用训练集作为验证模型是否良好的指标，那么模型可能过拟合了训练集，也就是在训练集上表现的越来越好，直至只在训练集上表现的“完美无缺”，而在真正使用这个模型的实际场景上，则变得很差，这时模型就像一个优秀的“应试型学生”一样，仅仅在如同试卷的训练集上非常优秀，但是在真正的实际应用场景中就变得一塌糊涂。</p>
+<p>在kaggle的课程中，先从平均绝对误差(Mean Absolute Error also called MAE)开始介绍，首先聚焦于误差，其中误差等于：
+$$误差 = 预测值 - 实际值$$</p>
+<p>然后MAE指标就是对于每个误差取绝对值，然后取这些绝对误差的平均值。这就是衡量模型质量的MAE标准。其对于n个数据的公式为
+$$ MAE = \frac{\sum_{1}^{n}\left|errro\right|}{n} =\frac{\sum_{1}^{n}\left|\hat{y}-y\right|}{n}$$</p>
+<p>在课程中，kaggle先训练了一个“墨尔本房价”的模型，然后调用sklearn.metrics中的mean_absolute_error进行平均绝对误差的验证，具体代码是这样的：</p>
+<pre><code class="language-python"># 模型构建
+# Data Loading Code Hidden Here
+import pandas as pd
+
+# Load data
+melbourne_file_path = '../input/melbourne-housing-snapshot/melb_data.csv'
+melbourne_data = pd.read_csv(melbourne_file_path) 
+# Filter rows with missing price values
+filtered_melbourne_data = melbourne_data.dropna(axis=0)
+# Choose target and features
+y = filtered_melbourne_data.Price
+melbourne_features = ['Rooms', 'Bathroom', 'Landsize', 'BuildingArea', 
+* * * * * * 'YearBuilt', 'Lattitude', 'Longtitude']
+X = filtered_melbourne_data[melbourne_features]
+
+from sklearn.tree import DecisionTreeRegressor
+# Define model
+melbourne_model = DecisionTreeRegressor()
+# Fit model
+melbourne_model.fit(X, y)
+</code></pre>
+<pre><code class="language-python"># 平均绝对误差评测
+from sklearn.metrics import mean_absolute_error
+
+predicted_home_prices = melbourne_model.predict(X)
+mean_absolute_error(y, predicted_home_prices)
+</code></pre>
+<p>当然前文提到了最好训练集和测试集是分开的，所以课程也介绍了通过调用sklearn.model_selection中train_test_split用于在一个数据集中随机分离训练集和测试集的方法，</p>
+<pre><code class="language-python">from sklearn.model_selection import train_test_split
+
+# split data into training and validation data, for both features and target
+# The split is based on a random number generator. Supplying a numeric value to
+# the random_state argument guarantees we get the same split every time we
+# run this script.
+train_X, val_X, train_y, val_y = train_test_split(X, y, random_state = 0)
+# Define model
+melbourne_model = DecisionTreeRegressor()
+# Fit model
+melbourne_model.fit(train_X, train_y)
+
+# get predicted prices on validation data
+val_predictions = melbourne_model.predict(val_X)
+print(mean_absolute_error(val_y, val_predictions))
+</code></pre>
+<h3 id="4">4.过拟合和欠拟合</h3>
+<p>kaggle用了一章来介绍过拟合和欠拟合的相关知识，我感觉这部分知识属于比较基础的内容，所以就简单描述下。</p>
+<p>针对于决策树部分，课程介绍的针对于决策树最主要的解决过拟合的方法就是剪枝，也就是通过控制叶子结点的个数来增强模型的拟合能力。在课程中，列出了一个通过计算不同最大节点数下MAE值的函数来找出最合适的结点树，具体代码如下：</p>
+<pre><code class="language-python">from sklearn.metrics import mean_absolute_error
+from sklearn.tree import DecisionTreeRegressor
+
+def get_mae(max_leaf_nodes, train_X, val_X, train_y, val_y):
+* model = DecisionTreeRegressor(max_leaf_nodes=max_leaf_nodes, random_state=0)
+* model.fit(train_X, train_y)
+* preds_val = model.predict(val_X)
+* mae = mean_absolute_error(val_y, preds_val)
+* return(mae)
+
+for max_leaf_nodes in [5, 50, 500, 5000]:
+* my_mae = get_mae(max_leaf_nodes, train_X, val_X, train_y, val_y)
+* print(&quot;Max leaf nodes: %d  \t\t Mean Absolute Error:  %d&quot; %(max_leaf_nodes, my_mae))
+</code></pre>
+<h3 id="5">5.随机森林</h3>
+<p>在kaggle“认识机器学习”的最后一章中试图介绍了以随进森林算法为代表的更为先进的建模方法。随机森林使用很多棵树，通过平均每棵树的预测结果来进行预测。当然，这部分理论知识比较少，还是仅仅贴出了一份代码，并且通过最后远低于之前单随机树算法的MAE值来证明随机森林的优越性。</p>
+<pre><code class="language-python">#见过很多次的数据调用以及划分训练集、测试集。
+
+import pandas as pd
+* 
+# Load data
+melbourne_file_path = '../input/melbourne-housing-snapshot/melb_data.csv'
+melbourne_data = pd.read_csv(melbourne_file_path) 
+# Filter rows with missing values
+melbourne_data = melbourne_data.dropna(axis=0)
+# Choose target and features
+y = melbourne_data.Price
+melbourne_features = ['Rooms', 'Bathroom', 'Landsize', 'BuildingArea', 
+* * * * * * 'YearBuilt', 'Lattitude', 'Longtitude']
+X = melbourne_data[melbourne_features]
+
+from sklearn.model_selection import train_test_split
+
+# split data into training and validation data, for both features and target
+# The split is based on a random number generator. Supplying a numeric value to
+# the random_state argument guarantees we get the same split every time we
+# run this script.
+train_X, val_X, train_y, val_y = train_test_split(X, y,random_state = 0)
+
+
+</code></pre>
+<pre><code class="language-python">#调用随机森林方法并进行训练  
+
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import mean_absolute_error
+
+forest_model = RandomForestRegressor(random_state=1)
+forest_model.fit(train_X, train_y)
+melb_preds = forest_model.predict(val_X)
+print(mean_absolute_error(val_y, melb_preds))
+</code></pre>
+<h2 id="_2">特征工程</h2>
+<p>学习的第二部分我决定了解一下特征工程，因为我去尝试做了一下kaggle的新手区的比赛<a href="https://www.kaggle.com/competitions/titanic">Titanic - Machine Learning from Disaster</a>获得了Score0.75598的优秀成绩:laughing:，当然，我看到了有无数（297个）拿了1的大佬和1w多分数比我高的同志们，我也想要一个高一点的分数。在浏览了好多好多评论之后，我看到了一片看起来相当靠谱的指导帖，在里面提到了要好好做一下特征工程，我想这是我曾经没有关注过的层面，所以我想试试在经过特征工程之后我的模型可以变的多好。</p>
+<h3 id="_3">什么是特征工程</h3>
+<p>特征工程的目标就是使数据更适合当前的问题，在kaggle特征工程的相关课程里，成将介绍讲解</p>
+<ol>
+<li>如何确定那些特征是最重要的特征</li>
+<li>在实际问题中如何找到/创造新的特征</li>
+<li>对于一些复杂问题重新进行编码</li>
+<li>使用k-means聚类进行特征分割</li>
+<li>使用主成分分析法对数据进行分割成为新的特征</li>
+</ol>
+<p>通过以上这些方法，特征工程将
+* 提高模型的预测性能
+* 减少计算或数据需求
+* 提高结果的可解释性</p>
+<p>特征工程的知道原则是让特征更好的发挥作用，而特征能发挥作用的前提便是特征与我们所要也测的目标之间存在着某些联系。比如线性模型只能学习线性关系，因而在做某些线性相关模型的时候，应该更专注于将特征转化的与目标呈线性关系。这里的关键在于，对特征进行的转换实质上是模型本身的一部分。比如说，想通过一边的长度来预测正方形地块的价格。直接对长度拟合线性模型的结果会很差：因为边长和价格之间不是线性关系。然而，如果我们将长度特征进行平方求得 "面积"，就会创建一个线性关系。将 "面积 "添加到特征集意味着这个线性模型现在可以拟合抛物线。换句话说，将特征平方后，线性模型就能拟合平方特征了。</p>
+<p><img alt="仅以长度为特征的线性模型拟合效果不佳。" src="https://storage.googleapis.com/kaggle-media/learn/images/5D1z24N.png" /></p>
+<p>仅以长度为特征的线性模型拟合效果不佳。</p>
+<p><img alt="左图： 与 &quot;面积 &quot;的契合度更高。右图 长度的拟合效果也更好" src="https://storage.googleapis.com/kaggle-media/learn/images/BLRsYOK.png" /></p>
+<p>左图： 与 "面积 "的契合度更高。右图 长度的拟合效果也更好</p>
+<p>这也就是为什么特征工程可以对模型有很好的效果提升，当模型不能很好的学习某些特征的时候，可以由特征工程对于特征进行转化提升，让特征更好的适应模型。换句话说，如何让信息更好的适应模型应该是每次开发模型的时候要考虑的一个关键。</p>
+<h3 id="_4">特征工程的实践</h3>
+<p>kaggle课程上通过一个由混凝土配方预测混凝土抗压强度的背景来体现特征工程的作用。</p>
+<p>首先，先在未进行任何增强的数据上进行一次随机森林的模型训练，从而建立一个基线。这将有助于我们确定新特征是否真的有用。在特征工程流程的开始阶段，建立这样的基线是一种很好的做法。基线分数可以帮助你决定新功能是否值得保留，或者是否应该放弃它们并尝试其他方法。</p>
+<p>具体代码在此：</p>
+<pre><code class="language-python">import pandas as pd
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.model_selection import cross_val_score
+
+df = pd.read_csv(&quot;../input/fe-course-data/concrete.csv&quot;)
+df.head()
+
+
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">Cement</th>
+<th align="center">BlastFurnaceSlag</th>
+<th align="center">FlyAsh</th>
+<th align="center">Water</th>
+<th align="center">Superplasticizer</th>
+<th align="center">CoarseAggregate</th>
+<th align="center">FineAggregate</th>
+<th align="center">Age</th>
+<th align="center">CompressiveStrength</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0</td>
+<td align="center">540.0</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">162.0</td>
+<td align="center">2.5</td>
+<td align="center">1040.0</td>
+<td align="center">676.0</td>
+<td align="center">28</td>
+<td align="center">79.99</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">540.0</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">162.0</td>
+<td align="center">2.5</td>
+<td align="center">1055.0</td>
+<td align="center">676.0</td>
+<td align="center">28</td>
+<td align="center">61.89</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">332.5</td>
+<td align="center">142.5</td>
+<td align="center">0.0</td>
+<td align="center">228.0</td>
+<td align="center">0.0</td>
+<td align="center">932.0</td>
+<td align="center">594.0</td>
+<td align="center">270</td>
+<td align="center">40.27</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">332.5</td>
+<td align="center">142.5</td>
+<td align="center">0.0</td>
+<td align="center">228.0</td>
+<td align="center">0.0</td>
+<td align="center">932.0</td>
+<td align="center">594.0</td>
+<td align="center">365</td>
+<td align="center">41.05</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">198.6</td>
+<td align="center">132.4</td>
+<td align="center">0.0</td>
+<td align="center">192.0</td>
+<td align="center">0.0</td>
+<td align="center">978.4</td>
+<td align="center">825.5</td>
+<td align="center">360</td>
+<td align="center">44.30</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-python">X = df.copy()
+y = X.pop(&quot;CompressiveStrength&quot;)
+
+# Train and score baseline model
+baseline = RandomForestRegressor(criterion=&quot;absolute_error&quot;, random_state=0)
+baseline_score = cross_val_score(
+    baseline, X, y, cv=5, scoring=&quot;neg_mean_absolute_error&quot;
+)
+baseline_score = -1 * baseline_score.mean()
+
+print(f&quot;MAE Baseline Score: {baseline_score:.4}&quot;)
+
+
+</code></pre>
+<blockquote>
+<p>MAE Baseline Score: 8.232</p>
+</blockquote>
+<p>如果在家做过饭，就可能知道食谱中配料的比例通常比配料的绝对量更能预测食谱的结果。因此我们可以推断，上述特征的比率可以很好地预测压缩强度。</p>
+<p>下面的代码为数据集添加了三个新的比率特征。（震惊，水泥里有骨粉？？！！！还是deepl翻译错了）（和某颜求证了可能是骨料，粗骨料是石子，细骨料是沙子）</p>
+<pre><code class="language-python">
+
+X = df.copy()
+y = X.pop(&quot;CompressiveStrength&quot;)
+
+# Create synthetic features
+X[&quot;FCRatio&quot;] = X[&quot;FineAggregate&quot;] / X[&quot;CoarseAggregate&quot;] #细骨料与粗骨料的比例
+X[&quot;AggCmtRatio&quot;] = (X[&quot;CoarseAggregate&quot;] + X[&quot;FineAggregate&quot;]) / X[&quot;Cement&quot;]#粗细骨料与水泥的比例
+X[&quot;WtrCmtRatio&quot;] = X[&quot;Water&quot;] / X[&quot;Cement&quot;]#水和水泥的比例
+
+# Train and score model on dataset with additional ratio features
+model = RandomForestRegressor(criterion=&quot;absolute_error&quot;, random_state=0)
+score = cross_val_score(
+    model, X, y, cv=5, scoring=&quot;neg_mean_absolute_error&quot;
+)
+score = -1 * score.mean()
+
+print(f&quot;MAE Score with Ratio Features: {score:.4}&quot;)
+
+
+</code></pre>
+<blockquote>
+<p>MAE Score with Ratio Features: 7.948</p>
+</blockquote>
+<p>果然，性能得到了改善！这证明，这些新的比率特征向模型揭示了模型之前没有检测到的重要信息。</p>
+<h3 id="mutual-information">互信息(Mutual Information)</h3>
+<p>当我们初次接触一个新的数据集，常常会感到不知所措。因为我们可能会看到成百上千个甚至连描述都没有的特征，那我们该从何入手呢？</p>
+<p>第一步就是利用特征效用指标（一种衡量特征与目标之间关联的函数）构建一个排名。这样，您就可以选择一部分最有用的特征进行初步开发，暂且忽略掉其他效用不那么好的特征，从而提升开发的效率。</p>
+<p>这些被由来衡量特征效用的指标称为 "互信息"。互信息很像相关性，它衡量的是两个量之间的关系。互信息的优势在于它可以检测任何类型的关系，而相关性只能检测线性关系。</p>
+<p>互信息是一个很好的通用指标，尤其是在功能开发之初，当你还不知道要使用什么模型时，互信息非常有用。它具有以下优点：</p>
+<ul>
+<li>易于使用和解释</li>
+<li>计算效率高</li>
+<li>理论依据充分</li>
+<li>不易过度拟合</li>
+<li>能够检测任何类型的关系</li>
+</ul>
+<p>那么接下来我们介绍互信息及它的衡量标准。互信息从不确定性的角度描述关系。两个量之间的互信息（MI）是衡量对一个量的了解在多大程度上减少了另一个量的不确定性。如果您知道某个特征的值，您对目标的信心会增加多少？（没读懂，待会再翻译吧）</p>
+<p>kaggle课程给出了艾姆斯房屋数据中的一个例子。图中显示了房屋外观质量与售价之间的关系。每个点代表一栋房子。</p>
+<p><img alt="了解房屋的外部质量可以减少售价的不确定性" src="https://storage.googleapis.com/kaggle-media/learn/images/X12ARUK.png" /></p>
+<p>了解房屋的外部质量可以减少售价的不确定性</p>
+<p>从图中我们可以看出，知道 ExterQual 的值，就能更确定相应的销售价格--每一类 ExterQual 都会将销售价格集中在一定范围内。ExterQual 与 SalePrice 之间的相互信息是四种 ExterQual 值对 SalePrice 不确定性的平均减小程度。举例来说，由于 "Fair "比 "Typical "出现的频率低，因此 "Fair "在互信息评分中的权重较低。</p>
+<p>(技术说明：我们所说的不确定性是用信息论中的一个量 "熵 "来衡量的。一个变量的熵大致是指 "你平均需要问多少个'是'或'否'的问题来描述该变量的一次出现"。要问的问题越多，变量的不确定性就越大。互信息是指你期望特征回答多少个关于目标的问题（Mutual information is how many questions you expect the feature to answer about the target)。</p>
+<p>解读互信息得分</p>
+<p>数量间的最小互信息为 0.0。当 MI 为零时，两个量是独立的：任何一个量都不能告诉你关于另一个量的任何信息。相反，理论上，互信息指数没有上限。但在实践中，超过 2.0 左右的值并不常见。（互信息是一个对数量，因此它的增长速度非常缓慢）。</p>
+<p>下图将让你了解 MI 值如何与特征与目标之间的关联类型和程度相对应。</p>
+<p><img alt="左图： 随着特征与目标之间的依赖关系越来越紧密，互信息也随之增加。右图 互信息可以捕捉任何类型的关联（不仅仅是线性关联，如相关性。）" src="https://storage.googleapis.com/kaggle-media/learn/images/Dt75E1f.png" /></p>
+<p>左图： 随着特征与目标之间的依赖关系越来越紧密，互信息也随之增加。右图 互信息可以捕捉任何类型的关联（不仅仅是线性关联，如相关性。）</p>
+<p>在应用互信息时，需要记住以下几点：</p>
+<ul>
+<li>互信息可以帮助您了解某个特征单独作为目标预测指标的相对潜力。</li>
+<li>当一个特征与其他特征相互作用时，它的信息量可能会非常大，但单独使用时信息量就不会太大。MI 无法检测特征之间的交互作用。它是一种单变量度量。</li>
+<li>特征的实际有用性取决于与之配合使用的模型。只有当特征与目标之间的关系是模型可以学习的关系时，特征才是有用的。一个特征的 MI 分数很高，但这并不意味着你的模型可以利用这些信息做任何事情。您可能需要先转换特征，以揭示关联。</li>
+</ul>
+<p>关于互信息的一个示例：1985 年汽车</p>
+<p>汽车数据集由 1985 年款的 193 辆汽车组成。该数据集的目标是根据汽车的 23 个特征（如品牌、车身样式和马力）预测汽车的价格（目标值）。在本示例中，我们将利用互信息对特征进行排序，并通过数据可视化研究结果。</p>
+<pre><code class="language-python">
+
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import seaborn as sns
+
+plt.style.use(&quot;seaborn-whitegrid&quot;)
+
+df = pd.read_csv(&quot;../input/fe-course-data/autos.csv&quot;)
+df.head()
+
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">symboling</th>
+<th align="center">make</th>
+<th align="center">fuel_type</th>
+<th align="center">aspiration</th>
+<th align="center">num_of_doors</th>
+<th align="center">body_style</th>
+<th align="center">drive_wheels</th>
+<th align="center">engine_location</th>
+<th align="center">wheel_base</th>
+<th align="center">length</th>
+<th align="center">...</th>
+<th align="center">engine_size</th>
+<th align="center">fuel_system</th>
+<th align="center">bore</th>
+<th align="center">stroke</th>
+<th align="center">compression_ratio</th>
+<th align="center">horsepower</th>
+<th align="center">peak_rpm</th>
+<th align="center">city_mpg</th>
+<th align="center">highway_mpg</th>
+<th align="center">price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0</td>
+<td align="center">3</td>
+<td align="center">alfa-romero</td>
+<td align="center">gas</td>
+<td align="center">std</td>
+<td align="center">2</td>
+<td align="center">convertible</td>
+<td align="center">rwd</td>
+<td align="center">front</td>
+<td align="center">88.6</td>
+<td align="center">168.8</td>
+<td align="center">...</td>
+<td align="center">130</td>
+<td align="center">mpfi</td>
+<td align="center">3.47</td>
+<td align="center">2.68</td>
+<td align="center">9</td>
+<td align="center">111</td>
+<td align="center">5000</td>
+<td align="center">21</td>
+<td align="center">27</td>
+<td align="center">13495</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">3</td>
+<td align="center">alfa-romero</td>
+<td align="center">gas</td>
+<td align="center">std</td>
+<td align="center">2</td>
+<td align="center">convertible</td>
+<td align="center">rwd</td>
+<td align="center">front</td>
+<td align="center">88.6</td>
+<td align="center">168.8</td>
+<td align="center">...</td>
+<td align="center">130</td>
+<td align="center">mpfi</td>
+<td align="center">3.47</td>
+<td align="center">2.68</td>
+<td align="center">9</td>
+<td align="center">111</td>
+<td align="center">5000</td>
+<td align="center">21</td>
+<td align="center">27</td>
+<td align="center">16500</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">1</td>
+<td align="center">alfa-romero</td>
+<td align="center">gas</td>
+<td align="center">std</td>
+<td align="center">2</td>
+<td align="center">hatchback</td>
+<td align="center">rwd</td>
+<td align="center">front</td>
+<td align="center">94.5</td>
+<td align="center">171.2</td>
+<td align="center">...</td>
+<td align="center">152</td>
+<td align="center">mpfi</td>
+<td align="center">2.68</td>
+<td align="center">3.47</td>
+<td align="center">9</td>
+<td align="center">154</td>
+<td align="center">5000</td>
+<td align="center">19</td>
+<td align="center">26</td>
+<td align="center">16500</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">2</td>
+<td align="center">audi</td>
+<td align="center">gas</td>
+<td align="center">std</td>
+<td align="center">4</td>
+<td align="center">sedan</td>
+<td align="center">fwd</td>
+<td align="center">front</td>
+<td align="center">99.8</td>
+<td align="center">176.6</td>
+<td align="center">...</td>
+<td align="center">109</td>
+<td align="center">mpfi</td>
+<td align="center">3.19</td>
+<td align="center">3.40</td>
+<td align="center">10</td>
+<td align="center">102</td>
+<td align="center">5500</td>
+<td align="center">24</td>
+<td align="center">30</td>
+<td align="center">13950</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">2</td>
+<td align="center">audi</td>
+<td align="center">gas</td>
+<td align="center">std</td>
+<td align="center">4</td>
+<td align="center">sedan</td>
+<td align="center">4wd</td>
+<td align="center">front</td>
+<td align="center">99.4</td>
+<td align="center">176.6</td>
+<td align="center">...</td>
+<td align="center">136</td>
+<td align="center">mpfi</td>
+<td align="center">3.19</td>
+<td align="center">3.40</td>
+<td align="center">8</td>
+<td align="center">115</td>
+<td align="center">5500</td>
+<td align="center">18</td>
+<td align="center">22</td>
+<td align="center">17450</td>
+</tr>
+</tbody>
+</table>
+<p>用于 MI 的 scikit-learn 算法对离散特征和连续特征的处理方式不同。因此，你需要告诉它哪些是离散特征。根据经验，任何必须使用浮点类型的特征都不是离散特征。分类（对象或分类 d 类型）可以通过赋予标签编码来视为离散特征。（您可以在我们的分类变量课程中复习标签编码）。</p>
+<pre><code class="language-python">
+
+X = df.copy()
+y = X.pop(&quot;price&quot;)
+
+# Label encoding for categoricals
+for colname in X.select_dtypes(&quot;object&quot;):
+    X[colname], _ = X[colname].factorize()
+
+# All discrete features should now have integer dtypes (double-check this before using MI!)
+discrete_features = X.dtypes == int
+
+
+</code></pre>
+<p>Scikit-learn 的 feature_selection 模块中有两个互信息度量：一个用于实值目标（mutual_info_regression），另一个用于分类目标（mutual_info_classif）。我们的目标价格是实值目标。下一个单元格将计算特征的 MI 分数，并将其封装在一个漂亮的数据框架中。</p>
+<pre><code class="language-python">from sklearn.feature_selection import mutual_info_regression
+
+def make_mi_scores(X, y, discrete_features):
+    mi_scores = mutual_info_regression(X, y, discrete_features=discrete_features)
+    mi_scores = pd.Series(mi_scores, name=&quot;MI Scores&quot;, index=X.columns)
+    mi_scores = mi_scores.sort_values(ascending=False)
+    return mi_scores
+
+mi_scores = make_mi_scores(X, y, discrete_features)
+mi_scores[::3]  # show a few features with their MI scores
+</code></pre>
+<blockquote>
+<p>curb_weight          1.540126<br />
+highway_mpg          0.951700<br />
+length               0.621566<br />
+fuel_system          0.485085<br />
+stroke               0.389321<br />
+num_of_cylinders     0.330988<br />
+compression_ratio    0.133927<br />
+fuel_type            0.048139<br />
+Name: MI Scores, dtype: float64</p>
+</blockquote>
+<p>现在是条形图，便于比较：</p>
+<pre><code class="language-python">
+
+def plot_mi_scores(scores):
+    scores = scores.sort_values(ascending=True)
+    width = np.arange(len(scores))
+    ticks = list(scores.index)
+    plt.barh(width, scores)
+    plt.yticks(width, ticks)
+    plt.title(&quot;Mutual Information Scores&quot;)
+
+
+plt.figure(dpi=100, figsize=(8, 5))
+plot_mi_scores(mi_scores)
+
+
+</code></pre>
+<p><img alt="" src="https://www.kaggleusercontent.com/kf/126574300/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..bllHzVuyXlIRp5UBeS7xxg.ZL81lpx0tXLHUfYA1guSyTHfANtYMy9c2AvYtsxFZL0CGR-LEFBLrTdib_cOyMCpLQE_dIKzCQtyKYx5yS4cEHaH2gIubOS1rN3FfRyb6iw9V3HyUiCZAtt5SmlVSpzKjsYckEpFWZrOIs2LXpcgRAxd5qJ08aQ51zquXJuAMvJyJXltQ85sS4fA-IkoLq1H0lvrf9C61P2-0oJh_MC0PP0Xi3lZYZyOG5ryBx5NYokkoC7pgPjwKZIqp64p-kNXHu0eJ3gVcT-rtTgLTUezH06shczaws_npH6BWu9vtB9Y5LK1CEpgVp0n3WiififP6gnBa9iYgPGTsfcqSLIGCftHOipMt0RNs-oJRk08y1qm9SrvkkZXohJBe0ZJtil5qnCi2pPCCDLzJJt06k3ZKrDunbPfyVJjDt2aidIhpZa-0v-aP2zxllkZTz374dWHvFdH42hJm61tK9ylZRtqjn6Hp3D5NevxcMGevVUr46NVeg3Y29QM64rTMsyrpbng420VRSarZ1OsmoM1PWbBI7LEoopYwUBXb9ENkmCRecReeSPecTZWv4fSSQ-JPZjO6HRGR8--NNMquivNQYoxq4ZehoZoaLLLwxiM83eKk0TeNgOrMfX18QJdUWs6p2_8VVWxPgsqeCHTiuQYK2v-LGGESWgtZW0prcf51qj2xGU.yJtlDrFK5LMKA7PAnXT1Fw/__results___files/__results___7_0.png" /></p>
+<p>数据可视化是实用工具排名的重要后续手段。让我们仔细看看其中的几个。正如我们所预料的那样， curb_weight 特征获得了最高分，表明着它与我们的目标“价格”关系密切。</p>
+<pre><code class="language-python">sns.relplot(x=&quot;curb_weight&quot;, y=&quot;price&quot;, data=df);
+</code></pre>
+<p><img alt="" src="https://www.kaggleusercontent.com/kf/126574300/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..mEtfsAZUy-oKHAAmHaLokQ.bC08NCVVyM1ImVjt1J4-PpIbiIqihcn0VntRg-9lKtLzKVT-QkDBQp2vB_KwZFA3mCXKvB3v-ByyMo9N-932n_LMJKKPfwjiCh2EilXhul9gLam9DVeb5MCUvSMARGteVVhGjd13DIW4fFTl6PBy4aqKfNpOF8hN5JCgy0qycN15kj6N3VVdlYZQAIYYI5XbeYOYP0-dru02xaZgiDlYWuYScuYl20NJ6zF6SBNrrYTyoY1zYy1hnLP8LV14LrtMnHdBlZRfp6tkhh3VxhctvpIk1yyk0FntC9kUqaz4xKr-ii7BB30SDF-Eln95sI-UDi-VR62pcKAmf0FmhQGozuq8JLB_kkStehwGjt26ppiuN8AZcRFyPkGO2vIKVhyyTrtMqtxgoM2cnuleKukERCn6HWMaI1LUf3SNoWyzLZu9c09wbz5QyalJBGFP4BE9i9q5qzTtpg0lnK9i0NCxgoAzSdZTycWW51hy9nTuBRX8CxK48CEoC2cRcGbnUfAqK1QTlBSz_62kzeogq0bkq7DneaOhf1maDWNkd5WUHpJb-Agz0rUHwkBfLzeXmhFKxy5G6GF5CXKSdi9iK4G-vCozx4OLzuergU2CiYSxn24mUlRcnU9GaHD2q0sdG3pT9hUqGaab0UYZnDZINRHPN3ijEc_bvN-uO6xDxdho18w.hRDtM4DtSUL_Ia0S7TsXOA/__results___files/__results___9_0.png" /></p>
+<p>燃料类型特征的 MI 分数相当低，但我们可以从图中看到，它明显区分了马力特征中两个趋势不同的价格群体。这表明燃料类型产生了交互效应，可能并非不重要。在根据 MI 分数判定某个特征不重要之前，最好先研究一下任何可能的交互效应——相关的专业知识在这方面可以提供很多指导。</p>
+<p><img alt="" src="https://www.kaggleusercontent.com/kf/126574300/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..mEtfsAZUy-oKHAAmHaLokQ.bC08NCVVyM1ImVjt1J4-PpIbiIqihcn0VntRg-9lKtLzKVT-QkDBQp2vB_KwZFA3mCXKvB3v-ByyMo9N-932n_LMJKKPfwjiCh2EilXhul9gLam9DVeb5MCUvSMARGteVVhGjd13DIW4fFTl6PBy4aqKfNpOF8hN5JCgy0qycN15kj6N3VVdlYZQAIYYI5XbeYOYP0-dru02xaZgiDlYWuYScuYl20NJ6zF6SBNrrYTyoY1zYy1hnLP8LV14LrtMnHdBlZRfp6tkhh3VxhctvpIk1yyk0FntC9kUqaz4xKr-ii7BB30SDF-Eln95sI-UDi-VR62pcKAmf0FmhQGozuq8JLB_kkStehwGjt26ppiuN8AZcRFyPkGO2vIKVhyyTrtMqtxgoM2cnuleKukERCn6HWMaI1LUf3SNoWyzLZu9c09wbz5QyalJBGFP4BE9i9q5qzTtpg0lnK9i0NCxgoAzSdZTycWW51hy9nTuBRX8CxK48CEoC2cRcGbnUfAqK1QTlBSz_62kzeogq0bkq7DneaOhf1maDWNkd5WUHpJb-Agz0rUHwkBfLzeXmhFKxy5G6GF5CXKSdi9iK4G-vCozx4OLzuergU2CiYSxn24mUlRcnU9GaHD2q0sdG3pT9hUqGaab0UYZnDZINRHPN3ijEc_bvN-uO6xDxdho18w.hRDtM4DtSUL_Ia0S7TsXOA/__results___files/__results___11_0.png" /></p>
+<p>数据可视化是功能工程工具箱的重要补充。除了互信息等实用指标外，可视化还能帮助您发现数据中的重要关系。</p>
+<h3 id="_5">特征的开发</h3>
+<p>在探究选择出一组具有潜力的特征之后，就可以对这些特征进行开发，来创造最适合模型的特征。在kaggle课程中将使用以下四个数据集进行讲解：美国交通事故、1985 年汽车、混凝土配方和客户终身价值。</p>
+<p>在开发特征的时候，有以下一下小tips是可以关注的：
+* <strong>了解特征</strong>：参考数据集的数据文档（如果有的话）。
+*  <strong>研究问题领域，获取领域知识</strong>：如果您的问题是预测房价，那么可以做一些房地产方面的研究。维基百科可能是一个很好的起点，但书籍和期刊论文通常能提供最好的信息。
+* <strong>研究以前的工作</strong>：过去 Kaggle 竞赛中的解决方案文章是很好的资源。
+* <strong>使用数据可视化</strong>：可视化可以揭示特征分布中的病理或可以简化的复杂关系。在特征工程设计过程中，一定要将数据集可视化。</p>
+<p>数字变化型特征开发</p>
+<p>数字类型特征之间的关系通常通过数学公式来表达，这是经常会遇到的。一般在pandas中对列进行算术运算，就像对普通数字一样。</p>
+<p>在汽车数据集中有描述汽车发动机的特征。通过研究可以获得各种公式，用于创建可能有用的新特征。例如，"冲程比 "可以衡量发动机的效率和性能：</p>
+<pre><code class="language-python">autos[&quot;stroke_ratio&quot;] = autos.stroke / autos.bore
+
+autos[[&quot;stroke&quot;, &quot;bore&quot;, &quot;stroke_ratio&quot;]].head()
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">stroke</th>
+<th align="center">bore</th>
+<th align="center">stroke_ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0</td>
+<td align="center">2.68</td>
+<td align="center">3.47</td>
+<td align="center">0.772334</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">2.68</td>
+<td align="center">3.47</td>
+<td align="center">0.772334</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">3.47</td>
+<td align="center">2.68</td>
+<td align="center">1.294776</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">3.40</td>
+<td align="center">3.19</td>
+<td align="center">1.065831</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">3.40</td>
+<td align="center">3.19</td>
+<td align="center">1.065831</td>
+</tr>
+</tbody>
+</table>
+<p>组合越复杂，模型学习起来就越困难，就像发动机 "排量 "的计算公式，它是衡量发动机功率的标准：</p>
+<pre><code class="language-python">autos[&quot;displacement&quot;] = (
+    np.pi * ((0.5 * autos.bore) ** 2) * autos.stroke * autos.num_of_cylinders
+)
+
+</code></pre>
+<p>数据可视化可以提出转换建议，通常是通过幂或对数对特征进行 "重塑"。例如，美国事故中风速的分布高度倾斜。在这种情况下，对数可以有效地将其归一化：</p>
+<pre><code class="language-python"># If the feature has 0.0 values, use np.log1p (log(1+x)) instead of np.log
+accidents[&quot;LogWindSpeed&quot;] = accidents.WindSpeed.apply(np.log1p)
+
+# Plot a comparison
+fig, axs = plt.subplots(1, 2, figsize=(8, 4))
+sns.kdeplot(accidents.WindSpeed, shade=True, ax=axs[0])
+sns.kdeplot(accidents.LogWindSpeed, shade=True, ax=axs[1])
+</code></pre>
+<p><img alt="" src="https://www.kaggleusercontent.com/kf/126574294/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..p6wnDP2RtDMATIOYR0XS0w.nZA4HlW_PWRmy9b9pFGY9P61KZxoHRIHBIFHrrEOOkgzR6WsqeOo_Oym23RwkO92EjtH6f9UkAlCHHvz2hDB-ibgPzEbORjP0DoHl8z7cwS6fc1E5PvPO2qxUMfoMzdrwuAO1o9ZheU66Kf13J7Lkfri0zMA32yvJDZnwKGA_31XhPSWZGftYaoQJgKbU9xqJYOz1DrekhvInTT0GL9UqoCRl2vbd8sGPPfq36lNgGl0xvVAdQlESPN71YH47JcJJlCw5BEWGOBhdxaqXeA6lqEArx74qtcmIviYlkY7cVOew6YG9IkoHuRjmZ7JAz-3jnqP0wseC8NqfIzMePuyU9kusNdp9IRQC2NuAd4ubBGpY-Oz_8BAcz1gnTGfXbK90dSDbUO3lYV_0yNGSZD-vCPXHhsYdsW_Oim3lOErx0ZpOjy5yZ_QWJWef-kzR4gCFWmLjgrJT5El2Hi3hn-c3fhZIBJTskIkioPfCoaKbrqu4QRj0nIsqvL9-vObYpM7Hl-SYLNzZM-PgcRXbNC5agvvxOzu0pxc8RhYkROSPV02vLZWCQRC6Mlx0p0GgMoyOSpUMB5_Y7F3C78ANh-6tgtCoPu3Cz9HbHDFN-lga-r2WelkLWpfetpxIdG6mA8MpbhqxtQX8LiyKcBD3yH_b324sNxfobfVi2JPAXGRuNE.QiuvI_Yt_Y3RyZz0i5FIkA/__results___files/__results___7_1.png" /></p>
+<p>计数型特征</p>
+<p>描述某种事物存在或不存在的特征经常会再数据中出现，例如某些因素的是否存在会不会引发某种疾病。这些特征一般可以通过加和来创建出一个积极或者消极特征的总数。</p>
+<p>这些特征将一般是是二进制的（1 表示存在，0 表示不存在）或布尔型的（真或假）。在 Python 中，布尔值可以像整数一样相加。</p>
+<p>在 "交通事故"（Traffic Accidents）中，有几个特征表示事故附近是否有道路物体。这将使用求和方法创建附近道路特征总数的计数：</p>
+<pre><code class="language-python">roadway_features = [&quot;Amenity&quot;, &quot;Bump&quot;, &quot;Crossing&quot;, &quot;GiveWay&quot;,
+    &quot;Junction&quot;, &quot;NoExit&quot;, &quot;Railway&quot;, &quot;Roundabout&quot;, &quot;Station&quot;, &quot;Stop&quot;,
+    &quot;TrafficCalming&quot;, &quot;TrafficSignal&quot;]
+accidents[&quot;RoadwayFeatures&quot;] = accidents[roadway_features].sum(axis=1)
+
+accidents[roadway_features + [&quot;RoadwayFeatures&quot;]].head(10)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">Amenity</th>
+<th align="center">Bump</th>
+<th align="center">Crossing</th>
+<th align="center">GiveWay</th>
+<th align="center">Junction</th>
+<th align="center">NoExit</th>
+<th align="center">Railway</th>
+<th align="center">Roundabout</th>
+<th align="center">Station</th>
+<th align="center">Stop</th>
+<th align="center">TrafficCalming</th>
+<th align="center">TrafficSignal</th>
+<th align="center">RoadwayFeatures</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">True</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">True</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">True</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">True</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">True</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">0</td>
+</tr>
+</tbody>
+</table>
+<p>您也可以使用dataframe内置的方法来处理布尔值。在 "混凝土"数据集中有具体配方中的成分数量。许多混凝土配方中缺少一种或多种成分（即成分值为 0）。我们将用dataframe内置的gt方法来计算配方中所含不同成分的数量。</p>
+<p>ps：gt()方法返回与原始序列或数据帧相同形状的布尔值序列或数据帧，表示每个元素是否大于指定的值。
+举例：</p>
+<pre><code class="language-python">import pandas as pd
+
+data = {'A': [1, 2, 3, 4, 5],
+        'B': [6, 7, 8, 9, 10]}
+df = pd.DataFrame(data)
+
+result = df['A'].gt(3)
+
+print(result)
+
+</code></pre>
+<blockquote>
+<p>0    False<br />
+ 1    False<br />
+ 2    False<br />
+ 3     True<br />
+ 4     True<br />
+ Name: A, dtype: bool  </p>
+</blockquote></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
