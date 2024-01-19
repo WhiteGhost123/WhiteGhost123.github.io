@@ -855,7 +855,7 @@ plot_mi_scores(mi_scores)
 *  <strong>研究问题领域，获取领域知识</strong>：如果您的问题是预测房价，那么可以做一些房地产方面的研究。维基百科可能是一个很好的起点，但书籍和期刊论文通常能提供最好的信息。
 * <strong>研究以前的工作</strong>：过去 Kaggle 竞赛中的解决方案文章是很好的资源。
 * <strong>使用数据可视化</strong>：可视化可以揭示特征分布中的病理或可以简化的复杂关系。在特征工程设计过程中，一定要将数据集可视化。</p>
-<p>数字变化型特征开发</p>
+<h4 id="_6">数字型特征开发</h4>
 <p>数字类型特征之间的关系通常通过数学公式来表达，这是经常会遇到的。一般在pandas中对列进行算术运算，就像对普通数字一样。</p>
 <p>在汽车数据集中有描述汽车发动机的特征。通过研究可以获得各种公式，用于创建可能有用的新特征。例如，"冲程比 "可以衡量发动机的效率和性能：</p>
 <pre><code class="language-python">autos[&quot;stroke_ratio&quot;] = autos.stroke / autos.bore
@@ -920,7 +920,7 @@ sns.kdeplot(accidents.WindSpeed, shade=True, ax=axs[0])
 sns.kdeplot(accidents.LogWindSpeed, shade=True, ax=axs[1])
 </code></pre>
 <p><img alt="" src="https://www.kaggleusercontent.com/kf/126574294/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..p6wnDP2RtDMATIOYR0XS0w.nZA4HlW_PWRmy9b9pFGY9P61KZxoHRIHBIFHrrEOOkgzR6WsqeOo_Oym23RwkO92EjtH6f9UkAlCHHvz2hDB-ibgPzEbORjP0DoHl8z7cwS6fc1E5PvPO2qxUMfoMzdrwuAO1o9ZheU66Kf13J7Lkfri0zMA32yvJDZnwKGA_31XhPSWZGftYaoQJgKbU9xqJYOz1DrekhvInTT0GL9UqoCRl2vbd8sGPPfq36lNgGl0xvVAdQlESPN71YH47JcJJlCw5BEWGOBhdxaqXeA6lqEArx74qtcmIviYlkY7cVOew6YG9IkoHuRjmZ7JAz-3jnqP0wseC8NqfIzMePuyU9kusNdp9IRQC2NuAd4ubBGpY-Oz_8BAcz1gnTGfXbK90dSDbUO3lYV_0yNGSZD-vCPXHhsYdsW_Oim3lOErx0ZpOjy5yZ_QWJWef-kzR4gCFWmLjgrJT5El2Hi3hn-c3fhZIBJTskIkioPfCoaKbrqu4QRj0nIsqvL9-vObYpM7Hl-SYLNzZM-PgcRXbNC5agvvxOzu0pxc8RhYkROSPV02vLZWCQRC6Mlx0p0GgMoyOSpUMB5_Y7F3C78ANh-6tgtCoPu3Cz9HbHDFN-lga-r2WelkLWpfetpxIdG6mA8MpbhqxtQX8LiyKcBD3yH_b324sNxfobfVi2JPAXGRuNE.QiuvI_Yt_Y3RyZz0i5FIkA/__results___files/__results___7_1.png" /></p>
-<p>计数型特征</p>
+<h4 id="_7">计数型特征</h4>
 <p>描述某种事物存在或不存在的特征经常会再数据中出现，例如某些因素的是否存在会不会引发某种疾病。这些特征一般可以通过加和来创建出一个积极或者消极特征的总数。</p>
 <p>这些特征将一般是是二进制的（1 表示存在，0 表示不存在）或布尔型的（真或假）。在 Python 中，布尔值可以像整数一样相加。</p>
 <p>在 "交通事故"（Traffic Accidents）中，有几个特征表示事故附近是否有道路物体。这将使用求和方法创建附近道路特征总数的计数：</p>
@@ -1114,19 +1114,17 @@ accidents[roadway_features + [&quot;RoadwayFeatures&quot;]].head(10)
 </tbody>
 </table>
 <p>您也可以使用dataframe内置的方法来处理布尔值。在 "混凝土"数据集中有具体配方中的成分数量。许多混凝土配方中缺少一种或多种成分（即成分值为 0）。我们将用dataframe内置的gt方法来计算配方中所含不同成分的数量。</p>
+<blockquote>
 <p>ps：gt()方法返回与原始序列或数据帧相同形状的布尔值序列或数据帧，表示每个元素是否大于指定的值。
-举例：</p>
-<pre><code class="language-python">import pandas as pd
-
+举例：
+```python
+import pandas as pd
 data = {'A': [1, 2, 3, 4, 5],
-        'B': [6, 7, 8, 9, 10]}
-df = pd.DataFrame(data)
-
-result = df['A'].gt(3)
-
-print(result)
-
-</code></pre>
+       'B': [6, 7, 8, 9, 10]}
+df = pd.DataFrame(data)</p>
+<p>result = df['A'].gt(3)</p>
+<p>print(result)</p>
+<p>```</p>
 <blockquote>
 <p>0    False<br />
  1    False<br />
@@ -1134,7 +1132,1046 @@ print(result)
  3     True<br />
  4     True<br />
  Name: A, dtype: bool  </p>
-</blockquote></div>
+</blockquote>
+</blockquote>
+<pre><code class="language-python">
+components = [ &quot;Cement&quot;, &quot;BlastFurnaceSlag&quot;, &quot;FlyAsh&quot;, &quot;Water&quot;,
+               &quot;Superplasticizer&quot;, &quot;CoarseAggregate&quot;, &quot;FineAggregate&quot;]
+concrete[&quot;Components&quot;] = concrete[components].gt(0).sum(axis=1)
+
+concrete[components + [&quot;Components&quot;]].head(10)
+
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">Cement</th>
+<th align="center">BlastFurnaceSlag</th>
+<th align="center">FlyAsh</th>
+<th align="center">Water</th>
+<th align="center">Superplasticizer</th>
+<th align="center">CoarseAggregate</th>
+<th align="center">FineAggregate</th>
+<th align="center">Components</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0</td>
+<td align="center">540.0</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">162.0</td>
+<td align="center">2.5</td>
+<td align="center">1040.0</td>
+<td align="center">676.0</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">540.0</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">162.0</td>
+<td align="center">2.5</td>
+<td align="center">1055.0</td>
+<td align="center">676.0</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">332.5</td>
+<td align="center">142.5</td>
+<td align="center">0.0</td>
+<td align="center">228.0</td>
+<td align="center">0.0</td>
+<td align="center">932.0</td>
+<td align="center">594.0</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">332.5</td>
+<td align="center">142.5</td>
+<td align="center">0.0</td>
+<td align="center">228.0</td>
+<td align="center">0.0</td>
+<td align="center">932.0</td>
+<td align="center">594.0</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">198.6</td>
+<td align="center">132.4</td>
+<td align="center">0.0</td>
+<td align="center">192.0</td>
+<td align="center">0.0</td>
+<td align="center">978.4</td>
+<td align="center">825.5</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">266.0</td>
+<td align="center">114.0</td>
+<td align="center">0.0</td>
+<td align="center">228.0</td>
+<td align="center">0.0</td>
+<td align="center">932.0</td>
+<td align="center">670.0</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">380.0</td>
+<td align="center">95.0</td>
+<td align="center">0.0</td>
+<td align="center">228.0</td>
+<td align="center">0.0</td>
+<td align="center">932.0</td>
+<td align="center">594.0</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="center">380.0</td>
+<td align="center">95.0</td>
+<td align="center">0.0</td>
+<td align="center">228.0</td>
+<td align="center">0.0</td>
+<td align="center">932.0</td>
+<td align="center">594.0</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="center">266.0</td>
+<td align="center">114.0</td>
+<td align="center">0.0</td>
+<td align="center">228.0</td>
+<td align="center">0.0</td>
+<td align="center">932.0</td>
+<td align="center">670.0</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td align="center">475.0</td>
+<td align="center">0.0</td>
+<td align="center">0.0</td>
+<td align="center">228.0</td>
+<td align="center">0.0</td>
+<td align="center">932.0</td>
+<td align="center">594.0</td>
+<td align="center">4</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_8">分解组合特征</h4>
+<p>通常情况下，复杂的字符串可以分解成较简单的部分。一些常见的例子</p>
+<blockquote>
+<p>ID 号码： '123-45-6789'
+电话号码： '(999) 555-0123'
+街道地址："8241 Kaggle Ln., Goose City, NV
+互联网地址：'http://www.kaggle.com
+产品代码："0 36000 29145 2
+日期和时间："Mon Sep 30 07:06:05 2013</p>
+</blockquote>
+<p>类似这样的功能通常都有某种规律可以加以利用。例如，美国电话号码有一个区号（"(999) "部分），可以告诉您来电者的位置。和往常一样，在这里进行一些研究会有所收获。</p>
+<p>使用 str 访问器，可以直接将 split 等字符串方法应用到列中。 Customer Lifetime Value数据集中描述了保险公司客户的一些特征。我们可以从Policy 特征中分离出不同承保等级及承保类型：</p>
+<pre><code class="language-python">
+
+customer[[&quot;Type&quot;, &quot;Level&quot;]] = (  # Create two new features
+    customer[&quot;Policy&quot;]           # from the Policy feature
+    .str                         # through the string accessor
+    .split(&quot; &quot;, expand=True)     # by splitting on &quot; &quot;
+                                 # and expanding the result into separate columns
+)
+
+customer[[&quot;Policy&quot;, &quot;Type&quot;, &quot;Level&quot;]].head(10)
+
+
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">Policy</th>
+<th align="center">Type</th>
+<th align="center">Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0</td>
+<td align="center">Corporate L3</td>
+<td align="center">Corporate</td>
+<td align="center">L3</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">Personal L3</td>
+<td align="center">Personal</td>
+<td align="center">L3</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">Personal L3</td>
+<td align="center">Personal</td>
+<td align="center">L3</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">Corporate L2</td>
+<td align="center">Corporate</td>
+<td align="center">L2</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">Personal L1</td>
+<td align="center">Personal</td>
+<td align="center">L1</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">Personal L3</td>
+<td align="center">Personal</td>
+<td align="center">L3</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">Corporate L3</td>
+<td align="center">Corporate</td>
+<td align="center">L3</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="center">Corporate L3</td>
+<td align="center">Corporate</td>
+<td align="center">L3</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="center">Corporate L3</td>
+<td align="center">Corporate</td>
+<td align="center">L3</td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td align="center">Special L2</td>
+<td align="center">Special</td>
+<td align="center">L2</td>
+</tr>
+</tbody>
+</table>
+<p>如果有理由相信特征的组合中存在某种交互作用，也可以将简单的特征连接成一个新的特征（不过说实话我们想到有什么用，所以这块先不写了）</p>
+<h4 id="_9">分组变换</h4>
+<p>最后，我们还有分组变换，它可以按某种类别进行分组，然后汇总多行信息。通过分组转换，您可以创建以下功能： "一个人居住州的平均收入 "或 "按类型划分的工作日上映电影的比例"。如果你发现了一个类别的交互作用，那么对该类别进行分组变换可能是一个很好的研究方向。</p>
+<p>使用聚合函数，分组变换结合了两个特征：一个是提供分组的分类特征，另一个是您希望聚合其值的特征。对于 "各州平均收入"，您可以选择州作为分组特征，平均值作为聚合函数，收入作为聚合特征。要在 Pandas 中计算，我们需要使用 groupby 和 transform 方法：</p>
+<pre><code class="language-python">customer[&quot;AverageIncome&quot;] = (
+    customer.groupby(&quot;State&quot;)  # for each state
+    [&quot;Income&quot;]                 # select the income
+    .transform(&quot;mean&quot;)         # and compute its mean
+)
+
+customer[[&quot;State&quot;, &quot;Income&quot;, &quot;AverageIncome&quot;]].head(10)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">State</th>
+<th align="center">Income</th>
+<th align="center">AverageIncome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0</td>
+<td align="center">Washington</td>
+<td align="center">56274</td>
+<td align="center">38122.733083</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">Arizona</td>
+<td align="center">0</td>
+<td align="center">37405.402231</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">Nevada</td>
+<td align="center">48767</td>
+<td align="center">38369.605442</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">California</td>
+<td align="center">0</td>
+<td align="center">37558.946667</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">Washington</td>
+<td align="center">43836</td>
+<td align="center">38122.733083</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">Oregon</td>
+<td align="center">62902</td>
+<td align="center">37557.283353</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">Oregon</td>
+<td align="center">55350</td>
+<td align="center">37557.283353</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="center">Arizona</td>
+<td align="center">0</td>
+<td align="center">37405.402231</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="center">Oregon</td>
+<td align="center">14072</td>
+<td align="center">37557.283353</td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td align="center">Oregon</td>
+<td align="center">28812</td>
+<td align="center">37557.283353</td>
+</tr>
+</tbody>
+</table>
+<p>mean()函数是一种dataframe 内置的方法，这意味着我们可以将它作为字符串传递给转换器。其他方便的方法包括 max、min、median、var、std 和 count。下面是计算数据集中每种状态出现频率的方法：</p>
+<pre><code class="language-python">customer[&quot;StateFreq&quot;] = (
+    customer.groupby(&quot;State&quot;)
+    [&quot;State&quot;]
+    .transform(&quot;count&quot;)
+    / customer.State.count()
+)
+
+customer[[&quot;State&quot;, &quot;StateFreq&quot;]].head(10)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">State</th>
+<th align="center">StateFreq</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0</td>
+<td align="center">Washington</td>
+<td align="center">0.087366</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">Arizona</td>
+<td align="center">0.186446</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">Nevada</td>
+<td align="center">0.096562</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">California</td>
+<td align="center">0.344865</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">Washington</td>
+<td align="center">0.087366</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">Oregon</td>
+<td align="center">0.284760</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">Oregon</td>
+<td align="center">0.284760</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="center">Arizona</td>
+<td align="center">0.186446</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="center">Oregon</td>
+<td align="center">0.284760</td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td align="center">Oregon</td>
+<td align="center">0.284760</td>
+</tr>
+</tbody>
+</table>
+<p>您可以使用这样的转换为分类特征创建 "频率编码"。</p>
+<p>如果要使用训练集和验证集，为了保持它们的独立性，最好只使用训练集创建分组特征，然后将其与验证集合并。我们可以在训练集上使用 drop_duplicates 创建一组唯一值后，使用验证集的合并方法：</p>
+<pre><code class="language-python"># Create splits
+df_train = customer.sample(frac=0.5)
+df_valid = customer.drop(df_train.index)
+
+# Create the average claim amount by coverage type, on the training set
+df_train[&quot;AverageClaim&quot;] = df_train.groupby(&quot;Coverage&quot;)[&quot;ClaimAmount&quot;].transform(&quot;mean&quot;)
+
+# Merge the values into the validation set
+# 关于合并merge()方法可以看下https://baijiahao.baidu.com/s?id=1773445677318349937&amp;wfr=spider&amp;for=pc
+df_valid = df_valid.merge(
+    df_train[[&quot;Coverage&quot;, &quot;AverageClaim&quot;]].drop_duplicates(),
+    on=&quot;Coverage&quot;,
+    how=&quot;left&quot;,
+)
+
+df_valid[[&quot;Coverage&quot;, &quot;AverageClaim&quot;]].head(10)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">Coverage</th>
+<th align="center">AverageClaim</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0</td>
+<td align="center">Premium</td>
+<td align="center">671.603973</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">Basic</td>
+<td align="center">375.455516</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">Basic</td>
+<td align="center">375.455516</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">Basic</td>
+<td align="center">375.455516</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">Basic</td>
+<td align="center">375.455516</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">Basic</td>
+<td align="center">375.455516</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">Basic</td>
+<td align="center">375.455516</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="center">Basic</td>
+<td align="center">375.455516</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="center">Extended</td>
+<td align="center">474.483232</td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td align="center">Basic</td>
+<td align="center">375.455516</td>
+</tr>
+</tbody>
+</table>
+<p>在创建功能时，最好牢记模型自身的优缺点。以下是一些创建特征的提示:：</p>
+<ol>
+<li>线性模型可以自然地学习和与差，但无法学习更复杂的内容。</li>
+<li>对于大多数模型来说，比率似乎很难学习。比率组合通常能轻松提高性能。</li>
+<li>线性模型和神经网络通常在使用归一化特征时表现更好。基于树的模型（如随机森林和 XGBoost）有时也能从归一化中获益，但通常要少得多。</li>
+<li>树状模型可以学习近似几乎所有的特征组合，但当某个组合特别重要时，它们仍然可以从明确创建该组合中获益，尤其是在数据有限的情况下。</li>
+<li>计数对树状模型尤其有帮助，因为这些模型没有一种自然的方法来同时汇总许多特征的信息。</li>
+</ol>
+<h3 id="k-means">以K-means算法为代表的聚类算法</h3>
+<p>接下来的两章将使用所谓的无监督学习算法。无监督算法不使用目标；相反，它们的目的是学习数据的某些属性，以某种方式表示特征的结构。在用于预测的特征工程中，你可以将无监督算法视为一种 "特征发现"技术。</p>
+<p>聚类简单地说就是根据数据点之间的相似程度，将数据点分配到不同的组中。聚类算法可以说是 "物以类聚"。</p>
+<p>当用于特征工程时，我们可以尝试发现代表细分市场的客户群体，或者具有相似天气模式的地理区域。添加聚类标签特征可以帮助机器学习模型理清复杂的空间或邻近关系。</p>
+<p>作为特征的聚类标签</p>
+<p>对于某个真是存在的特征，聚类的作用类似于传统的 "分选 "或 "离散化 "变换。对于多个特征，它就像 "多维分选"（有时也称为向量量化）。</p>
+<p><img alt="" src="https://storage.googleapis.com/kaggle-media/learn/images/sr3pdYI.png" /></p>
+<p>左侧为单特征聚类，右侧为两个特征的聚类</p>
+<p>将聚类结果加入到dataframe</p>
+<table>
+<thead>
+<tr>
+<th align="center">Longitude</th>
+<th align="center">Latitude</th>
+<th align="center">Cluster</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">-93.619</td>
+<td align="center">42.054</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">-93.619</td>
+<td align="center">42.053</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">-93.638</td>
+<td align="center">42.060</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">-93.602</td>
+<td align="center">41.988</td>
+<td align="center">0</td>
+</tr>
+</tbody>
+</table>
+<p>重要的是要记住，这个聚类特征是分类特征。这里显示的是典型聚类算法会产生的标签编码（即整数序列）；根据您的模型，one-hot编码可能更合适。</p>
+<p>添加聚类标签的原因是，聚类将把特征间的复杂关系分解成更简单的块。这样，我们的模型就可以逐一学习较简单的部分，而不必一次性学习复杂的整体。这是一种 "分而治之"的策略。</p>
+<p><img alt="" src="https://storage.googleapis.com/kaggle-media/learn/images/rraXFed.png" /></p>
+<p>对 "建造年份 "特征进行聚类有助于该线性模型了解其与 "销售价格 "之间的关系。</p>
+<p>该图显示了聚类如何改进简单的线性模型。对于这种模型来说，"建造年份 "和 "销售价格 "之间的曲线关系过于复杂--不够理想。然而，在较小的块上，这种关系几乎是线性的，因此模型可以很容易地学习</p>
+<h4 id="k-means_1">K-means算法介绍</h4>
+<p>聚类算法有很多。它们的主要区别在于如何衡量 "相似性 "或 "接近性"，以及使用何种特征。我们将使用的 k-means 算法非常直观，易于在特征工程中应用。当然，在不同的应用情况下，其他的算法也可能更使用。</p>
+<p>K-means 聚类使用普通的直线距离（即欧氏距离）来衡量相似性。它通过在特征空间内放置一些称为中心点的点来创建聚类。数据集中的每个点都会被分配到与之最接近的中心点所在的聚类中。k-means "中的 "k "表示创建的中心点（即聚类）的数量。k由你自己定义。</p>
+<p>你可以想象每个中心点通过一连串辐射圆来捕捉点。当来自相互竞争的中心点的圆组重叠时，就会形成一条线。这就是所谓的沃罗诺网状结构。该方格网显示了未来数据将被分配到哪些聚类；该方格网本质上就是 k-means 从其训练数据中学习到的。</p>
+<p>Ames数据集的聚类就是 k-means 聚类。下面是同样的图，显示了聚类网格和中心点。</p>
+<p><img alt="" src="https://storage.googleapis.com/kaggle-media/learn/images/KSoLd3o.jpg" /></p>
+<p>K-means 聚类特征即网格呈现的特征空间</p>
+<p>让我们回顾一下 k-means 算法是如何学习聚类的，以及这对特征工程意味着什么。我们将重点关注 scikit-learn 实现中的三个参数：n_clusters、max_iter 和 n_init。</p>
+<p>这是一个简单的两步过程。算法首先随机初始化一定数量（n_clusters）的中心点。然后迭代这两个操作：</p>
+<ul>
+<li>将一个数据点分配给最近的聚类中心点</li>
+<li>移动每个中心点，以最小化与其点之间的距离
+<img alt="" src="https://storage.googleapis.com/kaggle-media/learn/images/tBkCqXJ.gif" /></li>
+</ul>
+<p>The K-means clustering algorithm on Airbnb rentals in NYC. </p>
+<p>如果数据集数量较多，可能需要增加 max_iter，如果数据集较复杂，可能需要增加 n_init。但通常情况下，你唯一需要自己选择的参数是 n_clusters（即 k）。一组特征的最佳划分取决于你正在使用的模型和你试图预测的内容，因此最好像调整其他超参数一样调整它（比如通过交叉验证）。</p>
+<p>示例 - 加利福尼亚住房</p>
+<p>作为空间特征，加州住房的 "纬度 "和 "经度 "是 K 均值聚类的自然候选特征。在本示例中，我们将这些特征与 "MedInc"（收入中位数）进行聚类，以创建加州不同地区的经济细分。</p>
+<pre><code class="language-python">import matplotlib.pyplot as plt
+import pandas as pd
+import seaborn as sns
+from sklearn.cluster import KMeans
+
+plt.style.use(&quot;seaborn-whitegrid&quot;)
+plt.rc(&quot;figure&quot;, autolayout=True)
+plt.rc(
+    &quot;axes&quot;,
+    labelweight=&quot;bold&quot;,
+    labelsize=&quot;large&quot;,
+    titleweight=&quot;bold&quot;,
+    titlesize=14,
+    titlepad=10,
+)
+
+df = pd.read_csv(&quot;../input/fe-course-data/housing.csv&quot;)
+X = df.loc[:, [&quot;MedInc&quot;, &quot;Latitude&quot;, &quot;Longitude&quot;]]
+X.head()
+
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">MedInc</th>
+<th align="center">Latitude</th>
+<th align="center">Longitude</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0</td>
+<td align="center">8.3252</td>
+<td align="center">37.88</td>
+<td align="center">-122.23</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">8.3014</td>
+<td align="center">37.86</td>
+<td align="center">-122.22</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">7.2574</td>
+<td align="center">37.85</td>
+<td align="center">-122.24</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">5.6431</td>
+<td align="center">37.85</td>
+<td align="center">-122.25</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">3.8462</td>
+<td align="center">37.85</td>
+<td align="center">-122.25</td>
+</tr>
+</tbody>
+</table>
+<p>由于 k-means 聚类对尺度很敏感，因此最好对具有极端值的数据进行重新尺度化或归一化。我们的特征已经大致在同一尺度上，因此我们将保持不变。</p>
+<pre><code class="language-python"># Create cluster feature
+kmeans = KMeans(n_clusters=6)
+X[&quot;Cluster&quot;] = kmeans.fit_predict(X)
+X[&quot;Cluster&quot;] = X[&quot;Cluster&quot;].astype(&quot;category&quot;)
+
+X.head()
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">MedInc</th>
+<th align="center">Latitude</th>
+<th align="center">Longitude</th>
+<th align="center">Cluster</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0</td>
+<td align="center">8.3252</td>
+<td align="center">37.88</td>
+<td align="center">-122.23</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">8.3014</td>
+<td align="center">37.86</td>
+<td align="center">-122.22</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">7.2574</td>
+<td align="center">37.85</td>
+<td align="center">-122.24</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">5.6431</td>
+<td align="center">37.85</td>
+<td align="center">-122.25</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">3.8462</td>
+<td align="center">37.85</td>
+<td align="center">-122.25</td>
+<td align="center">2</td>
+</tr>
+</tbody>
+</table>
+<p>现在让我们来看几幅图，看看效果如何。首先，散点图显示了聚类的地理分布。算法似乎为沿海高收入地区创建了单独的部分。</p>
+<pre><code class="language-python">sns.relplot(
+    x=&quot;Longitude&quot;, y=&quot;Latitude&quot;, hue=&quot;Cluster&quot;, data=X, height=6,
+);
+</code></pre>
+<p><img alt="" src="https://www.kaggleusercontent.com/kf/137493070/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..YBmUcOt20Y4K741GbLNClA.-BeHu4IWJE8hEGaZ0nXuD6ukT7Wz9pGfs7q3MTruA4Ay9vZwfdhOQncO2gyoWqB2gQUHUQkDysom82DUuCY_zWU0GCV2Go_XxKjORb2m4l-bbq000WIlltNIOm25HEfeZ56-NhRn18YP57pILuNfRn5fZz3_-RV5iDERJXVBr1I7kORqvpJKMg-hvEuKP5ZdAv5BWkidu7ZMwhEutIbnPm-AYDQmh1nk8kssmY1GJFNzF9L6jbr02sfVsDpLW0jJ1EKBLYRnjMkwOeHsaAB2Nvy5LegjU_heidihZ4ER6gMFvJwfemv5RPcUi6CTnrURO68aLYi-aWWi9UL_svHhs4wXP_Rc3Qe9-Fj0ezsGz0JiOTXlVnluTMQ3Z49TKv4uxEMNi573MqabS7hvBlaPC_3XvDg68d0ZwZjxCoZAUtMlFsozKAhQGG4_ptJjvbh5lliBVmE55h8NPsBWDu8tnS12_f7hFfQAsHEKPzEqv7AW1h17WIp-mls-gpUYFpSMvhXsoPRCexkqQP-Dw46RC2SUCUp_ueEhQ3gaDDHD6KzqVeQCMStfLK9rxpLlqA9p7SA4_udwEblTNsF50EH-rIcXqY3MIR-cZ0oDy9zJGNe9qb96WoNaf9AufoRl1oBEIhBb9QaJAd_rKAST8ykONFke4Aeuo5zNWygwCy5zEh8.obcZsXWymFz_WvFaZsX4pw/__results___files/__results___6_1.png" /></p>
+<p>该数据集中的目标值是 MedHouseVal（房屋价值中位数）。这些方框图显示了目标值在每个聚类中的分布情况。如果聚类是有信息量的，那么这些分布在 MedHouseVal 上大部分应该是分开的，这正是我们所看到的。</p>
+<pre><code class="language-python">
+X[&quot;MedHouseVal&quot;] = df[&quot;MedHouseVal&quot;]
+sns.catplot(x=&quot;MedHouseVal&quot;, y=&quot;Cluster&quot;, data=X, kind=&quot;boxen&quot;, height=6);
+
+</code></pre>
+<p><img alt="" src="https://www.kaggleusercontent.com/kf/137493070/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..vRcdbHQcAh2ZxHgNKZ5AYQ.JFIBuAVj7g0O9h0MbLjkDXjNmG2v98OLXuVmYnF6gBrzxyo3eVV_abvE2_MEjirnAYAS0CXQxQClrbRm--jwT6Cams6PboIV6JIgpxx9FYE4GiTB-dp3CFUccMmSAOQu6u-8FGVRNK1ogCUZuSobXTD9VA34lckxbgI9JFJBbCoJV4ASWPW9MNQfQs3eY7UnyILK-PXlpbyfUgcb4pkXt4Pw_iMW8ZSnrfs8B9Qp5EHvqyHgmPXHJv2iZeVjK3UckHp5CiQ2yLAv7MxzBzEpAdg_tJtFc8NeBbHT_-PykGEG5587dL9L9F6G8sdqfeGhNaifb2Be2niiYtKvUSCJQN-efIR2GswddY0B0fysHrl6fz_OFJhEYuCjgKWEQUFLoEB2qd9XRRrFDS85bI9uKuNEgWIRJ3I39w3aAjSEHRk_jTX1cdh4X24hMUu8NR7ORqjdCiyVwfIDvkdHgapnk3e2URRku61G9yMYBZiytsHEGY9EqnTlwM77KNpvCewzrDeazD4HEJrEbOD_vJYjl1s7vrR3mGMD3n_blG5DIuk0bMp30HdjGBqKHVFOOL4R9x3-MBN82QwcArmWF37UMaYmdVGYKz5NuD8XHvWE8ywxkBvq1JVHvgh9uuYY1roElG30F1_MFQ96esU0YfWrOwQK4Dj8P6lOgLmyvwIzrsQ.A83VQ0iR8wajsPDrhsC0pA/__results___files/__results___8_1.png" /></p>
+<p>k-means 算法对数据的尺度（我不太清楚怎么形容它，可能被称为“数量级”更合适）很敏感。这就意味着我们需要深思熟虑，考虑如何以及是否要对特征进行重新缩放，因为根据我们的选择，可能会得到截然不同的结果。根据经验，如果特征已经具有直接可比性（比如不同时间的测试结果），那么就不需要重新缩放。另一方面，不具有可比性的特征（如身高和体重）通常会受益于重新缩放。有时，选择并不明确。在这种情况下，您应该尽量利用常识，记住值越大的特征权重越高。</p>
+<h3 id="pac">主成分分析法（PAC）</h3>
+<p>主成分分析法（PCA）就像聚类算法一样是基于接近性对数据集进行划分的一种方法，你也可以将 PCA 视为对数据中的相关性进行划分。PCA 是帮助您发现数据中重要关系的绝佳工具，也可用于创建信息量更大的特征。</p>
+<p>（技术说明：PCA 通常应用于标准化数据。对于标准化数据，"变异 "意味着 "相关性"。对于非标准化数据，"变异 "指的是 "协方差"。本课程中的所有数据在应用 PCA 之前都将标准化）。</p>
+<p>课程使用的 Abalone（鲍鱼）数据集中有几千个塔斯马尼亚鲍鱼的物理测量数据。（鲍鱼是一种海洋生物，很像蛤蜊或牡蛎。）我们现在只看几个特征：鲍鱼壳的 "高度 "和 "直径"。</p>
+<p>您可以想象，在这些数据中，有一些 "变异轴 "描述了鲍鱼之间的差异。从图像上看，这些轴线是沿着数据的自然尺寸运行的垂直线，每个原始特征有一个轴线。</p>
+<p><img alt="" src="https://storage.googleapis.com/kaggle-media/learn/images/rr8NCDy.png" /></p>
+<p>通常，我们可以为这些变化轴命名。较长的轴线我们可以称为 "尺寸 "部分：小高度和小直径（左下）与大高度和大直径（右上）形成对比。较短的轴线我们可以称为 "形状 "部分：小高度和大直径（扁平形状）与大高度和小直径（圆形）形成对比。</p>
+<p>请注意，与其用 "高度 "和 "直径 "来描述鲍鱼，不如用 "大小 "和 "形状 "来描述鲍鱼。事实上，这就是 PCA 的整个理念：我们不是用原始特征来描述数据，而是用数据的变异轴来描述它。变异轴就是新的特征。</p>
+<p><img alt="" src="https://storage.googleapis.com/kaggle-media/learn/images/XQlRD1q.png" /></p>
+<p>PCA 构建的新特征实际上只是原始特征的线性组合（加权和）：</p>
+<pre><code class="language-python">df[&quot;Size&quot;] = 0.707 * X[&quot;Height&quot;] + 0.707 * X[&quot;Diameter&quot;]
+df[&quot;Shape&quot;] = 0.707 * X[&quot;Height&quot;] - 0.707 * X[&quot;Diameter&quot;]
+</code></pre>
+<p>这些新特征被称为数据的主成分。这些权重被称之为载荷。原始数据集中有多少个特征，就会有多少个主成分：如果我们使用的是十个特征而不是两个，最终就会有十个成分。</p>
+<p>一个成分的载荷告诉我们它通过符号和大小表达了什么变化：</p>
+<table>
+<thead>
+<tr>
+<th align="center">Features \ Components</th>
+<th align="center">Size (PC1)</th>
+<th align="center">Shape (PC2)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Height</td>
+<td align="center">0.707</td>
+<td align="center">0.707</td>
+</tr>
+<tr>
+<td align="center">Diameter</td>
+<td align="center">0.707</td>
+<td align="center">-0.707</td>
+</tr>
+</tbody>
+</table>
+<p>这张载荷表告诉我们，在 "尺寸 "成分中，"高度 "和 "直径 "的变化方向相同（符号相同），但在 "形状 "成分中，它们的变化方向相反（符号相反）。在每个分量中，载荷的大小都相同，因此特征在两个分量中的作用相同。</p>
+<p>PCA 还能告诉我们每个分量的变化量。从图中我们可以看出，数据中 "尺寸 "分量的变异大于 "形状 "分量。PCA 通过每个分量的解释方差百分比精确地说明了这一点。</p>
+<p><img alt="" src="https://storage.googleapis.com/kaggle-media/learn/images/xWTvqDA.png" /></p>
+<p>在高度和直径的差异中，大小约占 96%，形状约占 4%。</p>
+<p>"Size"成分捕捉了 "身高 "和 "直径 "之间的大部分变异。不过，重要的是要记住，一个成分的变异量并不一定与它作为预测指标的好坏相对应：这取决于你试图预测什么。</p>
+<h4 id="pca">PCA 在特征工程中的作用</h4>
+<p>有两种方法可以将 PCA 用于特征工程。</p>
+<p>第一种方法是将其用作描述性技术。由于成分可以说明变异情况，因此可以计算成分的 MI 分数，看看哪种变异对目标最有预测性。这可以为您提供创建特征类型的思路--例如，如果 "尺寸 "很重要，可以创建 "高度 "和 "直径 "的乘积；如果 "形状 "很重要，可以创建 "高度 "和 "直径 "的比率。您甚至可以尝试对一个或多个高分成分进行聚类。</p>
+<p>第二种方法是使用成分本身作为特征。由于成分直接揭示了数据的变异结构，因此往往比原始特征更有信息量。下面是一些使用案例：</p>
+<blockquote>
+<ul>
+<li>降维： 当特征高度冗余（特别是多重共线性特征）时，PCA 会将冗余划分为一个或多个接近零方差的成分，由于这些成分几乎不包含任何信息，因此可以将其丢弃。</li>
+<li>异常检测： 在原始特征中并不明显的异常变化往往会在低方差成分中显现出来。在异常或离群点检测任务中，这些成分可能具有很高的信息量。</li>
+<li>降低噪音： 传感器读数集合通常会有一些共同的背景噪声。PCA 有时可以将（信息量大的）信号收集到数量较少的特征中，而将噪声排除在外，从而提高信噪比。</li>
+<li>去相关性： 有些多重特征法在处理高度相关的特征时会遇到困难。PCA 可将相关特征转化为不相关的成分，从而使算法更容易处理。</li>
+</ul>
+</blockquote>
+<p>从根本上说，PCA 可以让您直接访问数据的相关结构。毫无疑问，您会想出自己的应用方法！</p>
+<blockquote>
+<p>PCA 最佳实践
+应用 PCA 时需要注意以下几点：</p>
+<blockquote>
+<ul>
+<li>PCA 只适用于数字特征，如连续量或计数。</li>
+<li>PCA 对规模很敏感。在应用 PCA 之前，最好先将数据标准化，除非您有充分的理由不这样做。</li>
+<li>考虑移除或限制异常值，因为它们会对结果产生不当影响</li>
+</ul>
+</blockquote>
+</blockquote>
+<h4 id="-1985">实例-1985年汽车</h4>
+<p>在本例中，我们在汽车数据集，应用 PCA，将其作为描述性技术来发现新的特征。</p>
+<pre><code class="language-python">#可视化及MI值计算定义
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import seaborn as sns
+from IPython.display import display
+from sklearn.feature_selection import mutual_info_regression
+
+
+plt.style.use(&quot;seaborn-whitegrid&quot;)
+plt.rc(&quot;figure&quot;, autolayout=True)
+plt.rc(
+    &quot;axes&quot;,
+    labelweight=&quot;bold&quot;,
+    labelsize=&quot;large&quot;,
+    titleweight=&quot;bold&quot;,
+    titlesize=14,
+    titlepad=10,
+)
+
+
+def plot_variance(pca, width=8, dpi=100):
+    # Create figure
+    fig, axs = plt.subplots(1, 2)
+    n = pca.n_components_
+    grid = np.arange(1, n + 1)
+    # Explained variance
+    evr = pca.explained_variance_ratio_
+    axs[0].bar(grid, evr)
+    axs[0].set(
+        xlabel=&quot;Component&quot;, title=&quot;% Explained Variance&quot;, ylim=(0.0, 1.0)
+    )
+    # Cumulative Variance
+    cv = np.cumsum(evr)
+    axs[1].plot(np.r_[0, grid], np.r_[0, cv], &quot;o-&quot;)
+    axs[1].set(
+        xlabel=&quot;Component&quot;, title=&quot;% Cumulative Variance&quot;, ylim=(0.0, 1.0)
+    )
+    # Set up figure
+    fig.set(figwidth=8, dpi=100)
+    return axs
+
+def make_mi_scores(X, y, discrete_features):
+    mi_scores = mutual_info_regression(X, y, discrete_features=discrete_features)
+    mi_scores = pd.Series(mi_scores, name=&quot;MI Scores&quot;, index=X.columns)
+    mi_scores = mi_scores.sort_values(ascending=False)
+    return mi_scores
+
+
+df = pd.read_csv(&quot;../input/fe-course-data/autos.csv&quot;)
+</code></pre>
+<p>我们选择了四个特征，涵盖了一系列属性。这些特征中的每一个与目标价格的 MI 分数都很高。我们将对数据进行标准化处理，因为这些特征自然不在同一范围内。</p>
+<pre><code class="language-python">
+
+features = [&quot;highway_mpg&quot;, &quot;engine_size&quot;, &quot;horsepower&quot;, &quot;curb_weight&quot;]
+
+X = df.copy()
+y = X.pop('price')
+X = X.loc[:, features]
+
+# Standardize
+X_scaled = (X - X.mean(axis=0)) / X.std(axis=0)
+
+
+</code></pre>
+<p>现在，我们可以拟合 scikit-learn 的 PCA 估计器并创建主成分。您可以看到转换后数据集的前几行。</p>
+<pre><code class="language-python">from sklearn.decomposition import PCA
+
+# Create principal components
+pca = PCA()
+X_pca = pca.fit_transform(X_scaled)
+
+# Convert to dataframe
+component_names = [f&quot;PC{i+1}&quot; for i in range(X_pca.shape[1])]
+X_pca = pd.DataFrame(X_pca, columns=component_names)
+
+X_pca.head()
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">PC1</th>
+<th align="center">PC2</th>
+<th align="center">PC3</th>
+<th align="center">PC4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0</td>
+<td align="center">0.382486</td>
+<td align="center">-0.400222</td>
+<td align="center">0.124122</td>
+<td align="center">0.169539</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">0.382486</td>
+<td align="center">-0.400222</td>
+<td align="center">0.124122</td>
+<td align="center">0.169539</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">1.550890</td>
+<td align="center">-0.107175</td>
+<td align="center">0.598361</td>
+<td align="center">-0.256081</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">-0.408859</td>
+<td align="center">-0.425947</td>
+<td align="center">0.243335</td>
+<td align="center">0.013920</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">1.132749</td>
+<td align="center">-0.814565</td>
+<td align="center">-0.202885</td>
+<td align="center">0.224138</td>
+</tr>
+</tbody>
+</table>
+<p>拟合后，PCA 实例的 components_ 属性中就包含了载荷。（不幸的是，PCA 的术语并不一致。我们按照惯例将 X_pca 中的转换列称为成分，否则它们就没有名称）。我们将用一个Dataframe来封装载荷。</p>
+<pre><code class="language-python">
+loadings = pd.DataFrame(
+    pca.components_.T,  # transpose the matrix of loadings
+    columns=component_names,  # so the columns are the principal components
+    index=X.columns,  # and the rows are the original features
+)
+loadings
+
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">PC1</th>
+<th align="center">PC2</th>
+<th align="center">PC3</th>
+<th align="center">PC4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">highway_mpg</td>
+<td align="center">-0.492347</td>
+<td align="center">0.770892</td>
+<td align="center">0.070142</td>
+<td align="center">-0.397996</td>
+</tr>
+<tr>
+<td align="center">engine_size</td>
+<td align="center">0.503859</td>
+<td align="center">0.626709</td>
+<td align="center">0.019960</td>
+<td align="center">0.594107</td>
+</tr>
+<tr>
+<td align="center">horsepower</td>
+<td align="center">0.500448</td>
+<td align="center">0.013788</td>
+<td align="center">0.731093</td>
+<td align="center">-0.463534</td>
+</tr>
+<tr>
+<td align="center">curb_weight</td>
+<td align="center">0.503262</td>
+<td align="center">0.113008</td>
+<td align="center">-0.678369</td>
+<td align="center">-0.523232</td>
+</tr>
+</tbody>
+</table>
+<p>回想一下，一个成分载荷的符号和大小可以告诉我们它捕捉到了哪种变化。第一个分量（PC1）显示了油耗较低的大型、动力强劲的汽车与油耗较高的小型、更经济的汽车之间的对比。我们可以称之为 "豪华/经济 "轴。下图显示，我们选择的四个特征大多沿 "豪华/经济 "轴变化。</p>
+<p><img alt="" src="https://www.kaggleusercontent.com/kf/126574304/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..nMYR78bA7GRmTrIsyBYe-A.zb_ABVm3kUK69CH2ymwIyaP49fDTnj5nEk_ZkLdB7xcTbf9Nqwp3pav1IVYUJ2mHWxsi5pib1YGnRZTSQw-kzqPWRC9SOWdGquPaMvuvOPBm3Dn1CJPQkz_k7Wm0JTgsylY4NIAuVen2ktyH_4hIbGtytrv2-q9gOK52wPY1_IwnmqGf25k1s5HSaf-82SEvmcIFbanO_WDuX10u7IThxn2K-7nDyF0FQOycZc6k20bgUw7tHSV-HnZX4XmJv_u9IA1tRMt0SsYVU07w4PSgOg1kRlfbyXn2lNqZ9j-vVDqLLn34qUzCtGNxotqV-oQUtE4UYWaefkUJK_OzxkZ55tK5Fd9jBecwBZFOee40Woh62c3unzdwVCnH-EIUdJvTsthkT2TF97cDMmtdVJ0n0nd7NCL5wbeAYvtt2UZDOC34Er1eovF2eGqJTSLeRq5mtoYxScGyxlH1fuj5cNxAQ36PnJ7tqVl4jmy-n1iVTDc02iaXPKfPtGtlCvI5A-6K5fmnP_8PFnQ2twDMg_6O2-hRFv28acL5MNReSvVI2p-rZkmT9KnYA8o2_Adhy_uB--V8fu2hFMtGAPF_Am-D-4TPpTG3t4rIrg_4DGQKLgbWPA2lH2X9755U7KzJW-LwDV1-I-E-WM2jPal21uKTglUDa5WQoQ3_zN-wvdEcUf8O8_MTiyIgdZc4oq844o4W.5JYuCZgTyFrsq00X1QclaQ/__results___files/__results___11_0.png" /></p>
+<p>我们再来看看各成分的 MI 分数。不难看出，PC1 的信息量非常大，尽管其余成分的方差较小，但它们与价格的关系仍然显著。对这些成分进行研究，可以发现 "豪华/经济 "主轴没有反映的关系。</p>
+<pre><code class="language-python">mi_scores = make_mi_scores(X_pca, y, discrete_features=False)
+mi_scores
+</code></pre>
+<blockquote>
+<p>PC1    1.013264
+PC2    0.379156
+PC3    0.306703
+PC4    0.203329
+Name: MI Scores, dtype: float64</p>
+</blockquote>
+<p>第三个部分显示了马力和整备质量之间的对比 -- 似乎是跑车和旅行车的对比。</p>
+<pre><code class="language-python">
+
+# Show dataframe sorted by PC3
+idx = X_pca[&quot;PC3&quot;].sort_values(ascending=False).index
+cols = [&quot;make&quot;, &quot;body_style&quot;, &quot;horsepower&quot;, &quot;curb_weight&quot;]
+df.loc[idx, cols]
+
+
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">make</th>
+<th align="center">body_style</th>
+<th align="center">horsepower</th>
+<th align="center">curb_weight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">118</td>
+<td align="center">porsche</td>
+<td align="center">hardtop</td>
+<td align="center">207</td>
+<td align="center">2756</td>
+</tr>
+<tr>
+<td align="center">117</td>
+<td align="center">porsche</td>
+<td align="center">hardtop</td>
+<td align="center">207</td>
+<td align="center">2756</td>
+</tr>
+<tr>
+<td align="center">119</td>
+<td align="center">porsche</td>
+<td align="center">convertible</td>
+<td align="center">207</td>
+<td align="center">2800</td>
+</tr>
+<tr>
+<td align="center">45</td>
+<td align="center">jaguar</td>
+<td align="center">sedan</td>
+<td align="center">262</td>
+<td align="center">3950</td>
+</tr>
+<tr>
+<td align="center">96</td>
+<td align="center">nissan</td>
+<td align="center">hatchback</td>
+<td align="center">200</td>
+<td align="center">3139</td>
+</tr>
+<tr>
+<td align="center">...</td>
+<td align="center">...</td>
+<td align="center">...</td>
+<td align="center">...</td>
+<td align="center">...</td>
+</tr>
+<tr>
+<td align="center">59</td>
+<td align="center">mercedes-benz</td>
+<td align="center">wagon</td>
+<td align="center">123</td>
+<td align="center">3750</td>
+</tr>
+<tr>
+<td align="center">61</td>
+<td align="center">mercedes-benz</td>
+<td align="center">sedan</td>
+<td align="center">123</td>
+<td align="center">3770</td>
+</tr>
+<tr>
+<td align="center">101</td>
+<td align="center">peugot</td>
+<td align="center">wagon</td>
+<td align="center">95</td>
+<td align="center">3430</td>
+</tr>
+<tr>
+<td align="center">105</td>
+<td align="center">peugot</td>
+<td align="center">wagon</td>
+<td align="center">95</td>
+<td align="center">3485</td>
+</tr>
+<tr>
+<td align="center">143</td>
+<td align="center">toyota</td>
+<td align="center">wagon</td>
+<td align="center">62</td>
+<td align="center">3110</td>
+</tr>
+</tbody>
+</table>
+<p>为了表达这种对比，让我们创建一个新的比率特征：</p>
+<pre><code class="language-python">
+
+df[&quot;sports_or_wagon&quot;] = X.curb_weight / X.horsepower
+sns.regplot(x=&quot;sports_or_wagon&quot;, y='price', data=df, order=2);
+
+
+</code></pre>
+<p><img alt="" src="https://www.kaggleusercontent.com/kf/126574304/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..nMYR78bA7GRmTrIsyBYe-A.zb_ABVm3kUK69CH2ymwIyaP49fDTnj5nEk_ZkLdB7xcTbf9Nqwp3pav1IVYUJ2mHWxsi5pib1YGnRZTSQw-kzqPWRC9SOWdGquPaMvuvOPBm3Dn1CJPQkz_k7Wm0JTgsylY4NIAuVen2ktyH_4hIbGtytrv2-q9gOK52wPY1_IwnmqGf25k1s5HSaf-82SEvmcIFbanO_WDuX10u7IThxn2K-7nDyF0FQOycZc6k20bgUw7tHSV-HnZX4XmJv_u9IA1tRMt0SsYVU07w4PSgOg1kRlfbyXn2lNqZ9j-vVDqLLn34qUzCtGNxotqV-oQUtE4UYWaefkUJK_OzxkZ55tK5Fd9jBecwBZFOee40Woh62c3unzdwVCnH-EIUdJvTsthkT2TF97cDMmtdVJ0n0nd7NCL5wbeAYvtt2UZDOC34Er1eovF2eGqJTSLeRq5mtoYxScGyxlH1fuj5cNxAQ36PnJ7tqVl4jmy-n1iVTDc02iaXPKfPtGtlCvI5A-6K5fmnP_8PFnQ2twDMg_6O2-hRFv28acL5MNReSvVI2p-rZkmT9KnYA8o2_Adhy_uB--V8fu2hFMtGAPF_Am-D-4TPpTG3t4rIrg_4DGQKLgbWPA2lH2X9755U7KzJW-LwDV1-I-E-WM2jPal21uKTglUDa5WQoQ3_zN-wvdEcUf8O8_MTiyIgdZc4oq844o4W.5JYuCZgTyFrsq00X1QclaQ/__results___files/__results___17_0.png" /></p>
+<p><img alt="" src="https://www.kaggleusercontent.com/kf/126574304/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..kEdZAhOV90XckQiYr2RQqw.Ujb04KVjpZog9MX1apPBHSEHV5TlrTd0lrgv9OMzuf6yUoOczxptAJYRoPNDzs_YNik_iFp3xHHBZXnTD_TzVmvp62-RH3cLE-z_Lb_pom1AP-ZzLwrDCnC6PRY6dsQ80Dn8IXZyx6vfer4rbXT0kfi-pWNZUx51CmGfHkXa_CC3U4eybxMdEPK7NcPvmjXMSb-75L6IYtbFYhGufwxOYIiw_OyabxSoftGWbM3O_ZdglNJUf94L5TmqCtPFoh6_WoTOtVdabpNp6ugtrvH5Sdjwg12oo5mJ94LSKSiKENoEm_nW3m7i9M1gG_THCKEENLhiyMmvfBOi8BmYl750JpWzHOEalrLxf3vyqqLptpeJnbl1bo3YMEP7uS5vFpsevM3Lwfxu-gEZossT8xGVgn2TMkFwxIE2I2AY0JKCH-kIvvqH8YW0t3ICUIF4RPCDyvzoMDRQdJ2QcpPojYAQx5lbDq66Mk8rZe6U92Dgtag2r4e_wBhAKw-WXgulr0V6mpAJ5BKriHHvJ2PEmw0KyorJfrys8WoGKfRhHsNkdeS-roTJeHYh_1qJY-MBGcJ157WZ8g2-P4Kiw2qljmkD_JMLMlL5JPRzdkjDQpevEfkw9NNBXix4R69InR3QvNuHG8jVyYRXQK7vc6-aebs-2OX53RmhRIeObtripQLLFOeQNR0IU2BqfUWsC5tn92nG.liEJAKK-cRNqfiIw7GLpxw/__results___files/__results___17_0.png" /></p></div>
             </div>
         </div>
 
